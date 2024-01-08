@@ -5,8 +5,6 @@
     
     <router-view/>
 
-
-
     <Footer />
   </main>
   
