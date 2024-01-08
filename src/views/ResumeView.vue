@@ -8,8 +8,27 @@
 
 
             <div class="row my-5">
-                <h2>Education background</h2>
+                <div class="col">
+                    <h2>Education background</h2>
 
+                    <p v-for="education in getEducation()" :key="education">
+                        {{ education.year }}
+                        {{ education.description   }}
+                        {{  education.place }}
+                        {{  education.certificate }}
+                    </p>
+                </div>
+
+                
+
+            </div>
+
+            <div class="row">
+                    <h2>Skills</h2>
+                
+                <!-- <p v-for="aSkill in skills() " :key="aSkill">
+                    {{ aSkill }}
+                </p> -->
             </div>
 
         </div>
@@ -18,6 +37,28 @@
 
 <script>
     export default {
+        methods : {
+            getEducation(){
+                return this.$store.state.education
+            },
+            // skills(){
+            //     return this.$store.state.skills
+            // }
+        },
+        computed : {
+            displayEducationData(){
+                return this.$store.dispatch('getData')
+            },
+            // getSkills(){
+            //     return this.$store.dispatch('getData')
+            // }
+
+        },
+        mounted (){
+            this.displayEducationData
+            // this.getSkills
+        }
+
         
     }
 </script>
