@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="container">
+        <!-- <div class="container"> -->
             <div class="row footerRow">
                 <p class="lead"> Mzwamadoda Louw Portfolio &copy; 
                     <span>
@@ -8,7 +8,7 @@
                     </span>
                 </p>
             </div>
-        </div>
+        <!-- </div> -->
 
     </div>
 </template>

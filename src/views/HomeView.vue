@@ -7,11 +7,19 @@
       </div>
 
       <div class="col">
+        
         <h2 class="mt-5 pt-5 me-5">Hi, Welcome</h2> <br>
-      <h2 class="center m">To</h2>
+      
+        <h2 class="center m">To</h2>
+      
+      
       <h2 class="mt-5"> Mzwamadoda Louw's <br>
          Portfolio</h2>
+
+         <!-- {{ $store.state.about }} -->
+
       </div>
+
     </div>
 
   </div>
@@ -22,6 +30,7 @@
 
 export default {
   name: 'HomeView',
-  components: {  }
+  components: {  },
+
 }
 </script>
