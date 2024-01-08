@@ -26,18 +26,19 @@
 <script>
 
 export default {
-
+// returns the about changed value in the state
   methods : {
     getAbout(){
      return this.$store.state.about
     }
   },
-
   computed : {
+    // gets the data from the store
     displayData(){
       return this.$store.dispatch('getData')
     }
   },
+  // mounted, adds the data function in the page
   mounted(){
     this.displayData
   }

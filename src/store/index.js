@@ -40,12 +40,12 @@ export default createStore({
     async getData(context){
       let res = await fetch(dataUrl)
       let data = await res.json()
-      console.log(data);
+      console.log(data.skills);
 
       context.commit('setJobTitle', data.jobTitle[0].title)
       context.commit('setAbout', data.about)
-      context.commit('setJobTitle', data.education)
-      // context.commit('setJobTitle', data.jobTitle[0].title)
+      context.commit('setEducation', data.education)
+      // context.commit('setSkills', data)
       // context.commit('setJobTitle', data.jobTitle[0].title)
     }
   },
