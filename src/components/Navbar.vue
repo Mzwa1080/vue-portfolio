@@ -33,10 +33,10 @@
               <RouterLink to="/projects" class="nav-link "> Projects </RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink to="/testimonials" class="nav-link "> Testimonials </RouterLink>
+              <RouterLink to="/testimonials" class="nav-link "> Reviews </RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink to="/contacts" class="nav-link "> Contact </RouterLink>
+              <RouterLink to="/contact" class="nav-link "> Contact </RouterLink>
             </li>
 
           </ul>
