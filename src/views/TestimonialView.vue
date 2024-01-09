@@ -4,13 +4,14 @@
   </div>
 
   <div class="row">
-    <div class="card" v-for="review in testimonialData()" :key="review" style="width: 18rem;" >
+    <div class="card animate__animated animate__bounceInLeft" v-for="review in testimonialData()" :key="review" style="width: 18rem;" >
       <img  :src=review.profile class="card-img-top" alt="..." />
       <div class="card-body">
         <h5 class="card-title">{{ review.name }}</h5>
         <p class="card-text">
         {{ review.quotes }}
         </p>
+        
       </div>
 
       <h1>
