@@ -16,7 +16,7 @@ export default createStore({
   },
   mutations: {
     setJobTitle (state, value){
-      console.log(value);
+      // console.log(value);
       state.jobTitle = value;
     },
     setAbout (state, value){
@@ -32,6 +32,7 @@ export default createStore({
       state.projects = value
     },
     setTestimonials(state, value){
+      console.log(value);
       state.testimonials = value
     },
 
@@ -40,13 +41,14 @@ export default createStore({
     async getData(context){
       let res = await fetch(dataUrl)
       let data = await res.json()
-      console.log(data.projects);
+      console.log(data.testimonials);
 
       context.commit('setJobTitle', data.jobTitle[0].title)
       context.commit('setAbout', data.about)
       context.commit('setEducation', data.education)
       context.commit('setSkills' , data.skills)
       context.commit('setProjects', data.projects)
+      context.commit('setTestimonials', data.testimonials)
     }
   },
   modules: {
