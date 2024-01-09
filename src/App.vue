@@ -2,8 +2,10 @@
 
 <main class="container-fluid">
     <Navbar />
-    
-    <router-view/>
+    <div class="container">
+      <router-view/>
+
+    </div>
 
     <Footer />
   </main>

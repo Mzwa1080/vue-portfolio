@@ -14,7 +14,7 @@
 
         <p v-for="about in getAbout()" :key="about">
           {{ about }}
-
+ 
         </p>
       </div>
     </div>

@@ -26,9 +26,10 @@
             <div class="row">
                     <h2>Skills</h2>
                 
-                <!-- <p v-for="aSkill in skills() " :key="aSkill">
-                    {{ aSkill }}
-                </p> -->
+                <p v-for="skill in skills() " :key="skill">
+                    {{ skill.title }}
+                    
+                </p>
             </div>
 
         </div>
@@ -38,20 +39,19 @@
 <script>
     export default {
         methods : {
+            // get the state value of each variable
             getEducation(){
                 return this.$store.state.education
             },
-            // skills(){
-            //     return this.$store.state.skills
-            // }
+            skills(){
+                return this.$store.state.skills
+            }
         },
         computed : {
             displayEducationData(){
                 return this.$store.dispatch('getData')
             },
-            // getSkills(){
-            //     return this.$store.dispatch('getData')
-            // }
+ 
 
         },
         mounted (){
