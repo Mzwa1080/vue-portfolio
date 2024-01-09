@@ -26,13 +26,13 @@ export default createStore({
       state.education = value
     },
     setSkills(state, value){
-      state.education = value
-    },
-    setTestimonials(state, value){
-      state.education = value
+      state.skills = value
     },
     setProjects(state, value){
-      state.education = value
+      state.projects = value
+    },
+    setTestimonials(state, value){
+      state.testimonials = value
     },
 
   },
@@ -40,13 +40,13 @@ export default createStore({
     async getData(context){
       let res = await fetch(dataUrl)
       let data = await res.json()
-      console.log(data.skills);
+      console.log(data.projects);
 
       context.commit('setJobTitle', data.jobTitle[0].title)
       context.commit('setAbout', data.about)
       context.commit('setEducation', data.education)
-      // context.commit('setSkills', data)
-      // context.commit('setJobTitle', data.jobTitle[0].title)
+      context.commit('setSkills' , data.skills)
+      context.commit('setProjects', data.projects)
     }
   },
   modules: {
