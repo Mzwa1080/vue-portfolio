@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="navbar d-flex navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar d-flex navbar-expand-lg navbar-light bg-dark">
       <div class="container-fluid">
         <RouterLink to="/">
           <img
@@ -52,6 +52,10 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
+nav{
+  box-shadow: .2vw .2vw .2vw .2vw;
+  
+}
 </style>

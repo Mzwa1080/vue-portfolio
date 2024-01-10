@@ -3,21 +3,17 @@
     <h1>Reviews</h1>
   </div>
 
-  <div class="row">
-    <div class="card animate__animated animate__bounceInLeft" v-for="review in testimonialData()" :key="review" style="width: 18rem;" >
-      <img  :src=review.profile class="card-img-top" alt="..." />
+  <div class="row grid gap-4">
+    <div class="card shadow p-3 mb-5  " :class="review.name" v-for="review in testimonialData()" :key="review" style="width: 18rem;" >
+      <img  :src=review.profile class="card-img-top h-50" alt="..." />
       <div class="card-body">
-        <h5 class="card-title">{{ review.name }}</h5>
-        <p class="card-text">
+        <h5 class="card-title">{{ review.name }} {{ review.surname }}</h5>
+        <p class="card-text text-font">
         {{ review.quotes }}
         </p>
         
       </div>
 
-      <h1>
-
-          <!-- {{ review }} -->
-      </h1>
     </div>
   </div>
 </template>
@@ -45,4 +41,59 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Londrina+Solid&family=Roboto:wght@100;300&family=Salsa&display=swap");
+
+h1{
+  font-family: "Lobster", sans-serif;
+  font-family: "Londrina Solid", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Salsa", cursive;
+  color: #42b983;
+
+}
+h5{
+  font-family: "Lobster", sans-serif;
+  font-family: "Londrina Solid", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Salsa", cursive;
+}
+.text-font{
+  font-size: 10px;
+  font-weight: bolder;
+  font-family: "Lobster", sans-serif;
+  font-family: "Londrina Solid", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Salsa", cursive;
+}
+
+.Mzwakhe{
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: slideInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+}
+.Damon{
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: slideInDown; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+}
+
+.Taryn-lee{
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: slideInRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+}
+.Anathi{
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: slideInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+}
+</style>
