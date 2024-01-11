@@ -5,7 +5,7 @@
 
   <div class="row  gap-4">
     
-    <div class="card  shadow p-3 mb-5  " :class="review.name" v-for="review in testimonialData()" :key="review" style="width: 18rem;" >
+    <div class="card col-2 shadow p-3 mb-5  " :class="review.name" v-for="review in testimonialData()" :key="review" style="width: 18rem;" >
       <img loading="lazy" :src=review.profile class="card-img-top h-50" alt="..." />
       <div class="card-body">
         <h5 class="card-title">{{ review.name }} {{ review.surname }}</h5>
