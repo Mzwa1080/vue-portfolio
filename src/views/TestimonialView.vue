@@ -5,7 +5,7 @@
 
   <div class="row grid gap-4">
     <div class="card shadow p-3 mb-5  " :class="review.name" v-for="review in testimonialData()" :key="review" style="width: 18rem;" >
-      <img  :src=review.profile class="card-img-top h-50" alt="..." />
+      <img loading="lazy" :src=review.profile class="card-img-top h-50" alt="..." />
       <div class="card-body">
         <h5 class="card-title">{{ review.name }} {{ review.surname }}</h5>
         <p class="card-text text-font">
@@ -94,6 +94,13 @@ h5{
   margin: 0 0.5rem;
 
   animation: slideInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
+}
+.Ghamzah{
+  display: inline-block;
+  margin: 0 0.5rem;
+
+  animation: lightSpeedInRight; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 2s;
 }
 </style>
