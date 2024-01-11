@@ -20,10 +20,10 @@
           <div class="row my-3">
             <p class="card-text">{{ project.description }}</p>
           </div>
-          <div class="row my-3">
+          <div class="row  my-3">
             <div class="grid ">
-              <a :href="project.gitHub"  class="gap-4 btn ">Github</a>
-              <a :href="project.netlify" class="gap-4 btn ">Netlify</a>
+              <a :href="project.gitHub"  class=" btn myBtns">Github</a>
+              <a :href="project.netlify" class=" btn myBtns">Netlify</a>
             </div>
           </div>
         </div>
@@ -75,6 +75,6 @@ h1 {
 }
 
 .btn{
-  color: #42b983;
+  background-color: #42b983;
 }
 </style>
