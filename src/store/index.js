@@ -10,6 +10,7 @@ export default createStore({
     skills : null,
     testimonials : null,
     projects : null,
+    contacts : null
 
   },
   getters: {
@@ -32,23 +33,32 @@ export default createStore({
       state.projects = value
     },
     setTestimonials(state, value){
-      console.log(value);
+      // console.log(value);
       state.testimonials = value
     },
+    setContacts(state,value){
+      state.contacts = value
+    }
 
   },
   actions: {
     async getData(context){
-      let res = await fetch(dataUrl)
-      let data = await res.json()
-      console.log(data.testimonials);
+      try {
+        let res = await fetch(dataUrl)
+        let data = await res.json()
+        console.log(data.contacts);
+  
+        context.commit('setJobTitle', data.jobTitle[0].title)
+        context.commit('setAbout', data.about)
+        context.commit('setEducation', data.education)
+        context.commit('setSkills' , data.skills)
+        context.commit('setProjects', data.projects)
+        context.commit('setTestimonials', data.testimonials)
+        context.commit('setContacts', data.contacts)
 
-      context.commit('setJobTitle', data.jobTitle[0].title)
-      context.commit('setAbout', data.about)
-      context.commit('setEducation', data.education)
-      context.commit('setSkills' , data.skills)
-      context.commit('setProjects', data.projects)
-      context.commit('setTestimonials', data.testimonials)
+      }catch (e){
+        e.message
+      }
     }
   },
   modules: {
