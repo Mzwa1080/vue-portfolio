@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <div class="container"> -->
     <div class="row footerRow ">
       <p class="lead my-3">
         Mzwamadoda Louw Portfolio &copy;
@@ -10,15 +9,12 @@
       </p>
       <br />
       <p v-for="footerData in getContacts()" :key="footerData">
-        <button :src="footerData.linkedin" type="button">
 
-            <span class="p-3" ><i  class="bi bi-linkedin"></i></span>
-        </button>
+        <span class="p-3" ><i :href="footerData.linkedin" class="bi bi-linkedin"></i></span>
         <span class="p-3"  ><i :href="footerData.gitHub" class="bi bi-github"></i></span>
         <span class="p-3" ><i :href="footerData.whatsApp" class="bi bi-whatsapp"></i></span>
       </p>
     </div>
-    <!-- </div> -->
   </div>
 </template>
 
