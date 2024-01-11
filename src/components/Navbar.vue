@@ -18,7 +18,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse justify-content-end navbar-collapse" id="navbarNav">
+        <div class="collapse text-white justify-content-end navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
               <RouterLink to="/" class="nav-link "> Home </RouterLink>
@@ -56,7 +56,7 @@
 
 nav{
   box-shadow: .2vw .2vw .2vw .2vw;
-  color: white;
   
 }
+
 </style>
