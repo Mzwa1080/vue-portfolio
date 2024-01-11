@@ -57,5 +57,6 @@
 nav{
   box-shadow: .2vw .2vw .2vw .2vw;
   color: white;
+  
 }
 </style>
