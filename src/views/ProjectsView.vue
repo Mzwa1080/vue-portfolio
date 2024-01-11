@@ -21,9 +21,9 @@
             <p class="card-text">{{ project.description }}</p>
           </div>
           <div class="row my-3">
-            <div class="grid gap-4">
-              <a href="#" class="gap-4 btn btn-primary">Github</a>
-              <a href="#" class="gap-4 btn btn-primary">Netlify</a>
+            <div class="grid ">
+              <a :href="project.gitHub"  class="gap-4 btn ">Github</a>
+              <a :href="project.netlify" class="gap-4 btn ">Netlify</a>
             </div>
           </div>
         </div>
@@ -72,5 +72,9 @@ h1 {
 .bgg {
   box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw;
   color: black;
+}
+
+.btn{
+  color: #42b983;
 }
 </style>
