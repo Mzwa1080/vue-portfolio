@@ -43,7 +43,7 @@ export default createStore({
   },
   actions: {
     async getData(context){
-      try {
+      // try {
         let res = await fetch(dataUrl)
         let data = await res.json()
         console.log(data.contacts);
@@ -56,9 +56,9 @@ export default createStore({
         context.commit('setTestimonials', data.testimonials)
         context.commit('setContacts', data.contacts)
 
-      }catch (e){
-        e.message
-      }
+      // }catch (e){
+      //   e.message
+      // }
     }
   },
   modules: {
