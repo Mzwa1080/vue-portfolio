@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="row d-flex">
     <div class="row my-3">
       <h1 class="about-me">About Me</h1>
 
@@ -10,12 +10,15 @@
         <img class="img-about animate__animated animate__bounceInUp animate__repeat-2"   src="https://i.ibb.co/JzG7Rrk/removed-bg.png" alt="">
       </div>
 
-      <div class="col my-5 about animate__animated animate__zoomIn ">
+      <div v-if="getAbout" class="col my-5 about animate__animated animate__zoomIn ">
 
         <p class="my-5" v-for="about in getAbout()" :key="about">
           {{ about }}
  
         </p>
+      </div>
+      <div v-else>
+        <Spinner />
       </div>
     </div>
 
@@ -24,26 +27,27 @@
 </template>
 
 <script>
+import Spinner from '@/components/Spinner.vue';
+
 
 export default {
-// returns the about changed value in the state
-  methods : {
-    getAbout(){
-     return this.$store.state.about
-    }
-  },
-  computed : {
-    // gets the data from the store
-    displayData(){
-      return this.$store.dispatch('getData')
-    }
-  },
-  // mounted, adds the data function in the page
-  mounted(){
-    this.displayData
-  }
-
-
+    // returns the about changed value in the state
+    methods: {
+        getAbout() {
+            return this.$store.state.about;
+        }
+    },
+    computed: {
+        // gets the data from the store
+        displayData() {
+            return this.$store.dispatch('getData');
+        }
+    },
+    // mounted, adds the data function in the page
+    mounted() {
+        this.displayData;
+    },
+    components: { Spinner }
 }
 
 </script>
@@ -78,5 +82,12 @@ p{
   box-shadow: .2vw .2vw .2vw .2vw;
   color: #42b983;
 }
+
+@media screen and (width = 300px) {
+  .about {
+    font-size: .5rem;
+  }
+}
+
 
 </style>

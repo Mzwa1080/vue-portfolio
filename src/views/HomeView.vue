@@ -2,11 +2,11 @@
   <div >
 
     <div class="row vh-100 my-5">
-      <div class="col animate__animated animate__fadeInLeft">
+      <div class="col  animate__animated animate__fadeInLeft">
         <img class="img-fluid" src="https://i.ibb.co/6Y1fPHv/DSC-0270-removebg-preview.png" alt="">
       </div>
 
-      <div class="col ">
+      <div class="col welcome">
         
         <h2 class=" hi   me-5 animate__animated animate__fadeInRight">Hi, Welcome</h2> <br>
       
@@ -60,6 +60,12 @@ font-family: 'Salsa', cursive;
 }
 .to{
   font-size: 3rem;
+}
+
+@media screen and (width = 300px) {
+  .hi, .to {
+    font-size: 1rem;
+  }
 }
 
 </style>

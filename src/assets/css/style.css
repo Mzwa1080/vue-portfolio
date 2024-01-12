@@ -24,7 +24,15 @@ body{
   }
   
   nav a.router-link-exact-active {
-    color: #42b983;
+    color: yellow;
+  }
+  nav a:hover {
+    background-color: #42b983;
+    opacity: .2;
+    border-radius: 30rem;
+    margin: 0 0.5rem;
+
+    animation: bounceIn; /* referring directly to the animation's @keyframe declaration */
   }
 
   .img-nav{
