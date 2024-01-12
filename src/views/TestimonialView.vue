@@ -4,7 +4,7 @@
   </div>
 
 
-  <div class="col">
+  <div v-if="testimonialData" class="col">
 
     <div class="row  gap-4"> 
       <div class="card col-2 shadow p-3 mb-5  " :class="review.name" v-for="review in testimonialData()" :key="review" style="width: 18rem;" >
@@ -20,28 +20,29 @@
       </div>
     </div>
   </div>
+  <div class="row">
+    <Spinner />
+  </div>
 </template>
 
 <script>
+import Spinner from '@/components/Spinner.vue';
+
 export default {
-
-    methods : {
-        testimonialData(){
-            return this.$store.state.testimonials
+    methods: {
+        testimonialData() {
+            return this.$store.state.testimonials;
         }
     },
-
-    computed : {
-        getTestimonials (){
-            return this.$store.dispatch('getData')
+    computed: {
+        getTestimonials() {
+            return this.$store.dispatch('getData');
         }
     },
-
-    mounted (){
-        this.getTestimonials
-    }
-
-
+    mounted() {
+        this.getTestimonials;
+    },
+    components: { Spinner }
 };
 </script>
 

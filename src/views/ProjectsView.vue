@@ -30,17 +30,18 @@
       </div>
     </div>
     <div v-else>
-      <div class="d-flex justify-content-center">
-        <div class="spinner-border" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
+      <Spinner />
     </div>
   </div>
 </template>
 
 <script>
+import Spinner from '@/components/Spinner.vue';
+
 export default {
+  components : {
+    Spinner
+  },
   methods: {
     getProjects() {
       return this.$store.state.projects;

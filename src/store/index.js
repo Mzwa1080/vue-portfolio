@@ -53,7 +53,7 @@ export default createStore({
         context.commit('setEducation', data.education)
         context.commit('setSkills' , data.skills)
         context.commit('setProjects', data.projects)
-        context.commit('setTestimonials', data.testimonials)
+        // context.commit('setTestimonials', data.testimonials)
         context.commit('setContacts', data.contacts)
 
       // }catch (e){
