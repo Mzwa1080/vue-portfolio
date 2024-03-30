@@ -1,36 +1,27 @@
 <template>
-  <div >
 
-    <div class="row vh-100 my-5">
-      <div class="col  animate__animated animate__fadeInLeft">
-        <img class="img-fluid" src="https://i.ibb.co/6Y1fPHv/DSC-0270-removebg-preview.png" alt="">
+  
+    <div class="row ">
+
+      <div class="content">
+  <div class="row justify-content-center align-items-center"> 
+    <div class="col-md-12 ">
+      <div class="circle">
+        <img class="img-fluid" src="https://i.ibb.co/JzG7Rrk/removed-bg.png" alt="Mzwamadoda Louw">
       </div>
+    </div>
+  </div>
+  <div class="row justify-content-center align-items-center"> 
+    <div class="col-md-12 "> 
+      <h1>I'm Mzwamadoda Louw</h1>
+    </div>
+  </div>
+</div>
 
-      <div class="col welcome">
-        
-        <h2 class=" hi   me-5 animate__animated animate__fadeInRight">Hi, Welcome</h2> <br>
-      
-        <h2 class=" to center animate__animated animate__fadeInLeft">To</h2>
-      
-      
-      <h2 class=" hi mt-5 animate__animated animate__fadeInRight"> 
-
-        Mzwamadoda Louw's 
-
-      </h2> <br>
-
-      <h2 class="animate__animated animate__fadeInLeft">
-        <span > Portfolio</span>
-        
-      </h2>
-
-         <!-- {{ $store.state.about }} -->
-
-      </div>
 
     </div>
 
-  </div>
+
 </template>
 
 <script>
@@ -44,28 +35,29 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Londrina+Solid&family=Roboto:wght@100;300&family=Salsa&display=swap');
 
-h2{
-  font-family: 'Lobster', sans-serif;
-font-family: 'Londrina Solid', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Salsa', cursive;
-}
 
-.hi{
-  font-size: 5em;
-  color: #42b983;
+.content {
+   padding-top: 20px; 
+   transition: padding-left 0.5s; /* Add transition for smooth effect */
 
 }
-.to{
-  font-size: 3rem;
+
+
+
+@media screen and (max-width: 767px) {
+  .content {
+  /* margin-left: 200px; */
+   margin-top: 50px; /*Add padding for spacing */
+}
 }
 
-@media screen and (width = 300px) {
-  .hi, .to {
-    font-size: 1rem;
-  }
-}
+
+/* Image styles */
+/* .img-fluid {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+} */
 
 </style>

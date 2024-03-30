@@ -1,63 +1,128 @@
 <template>
-    <div>
-        <nav class="navbar d-flex  navbar-expand-lg navbar-light bg-dark">
-      <div class="container-fluid ">
-        <RouterLink to="/">
-          <img
-            class="img-fluid img-nav" src="https://i.ibb.co/yW0BcyV/Gold-Luxury-Initial-Circle-Logo.png" alt="logo"
-          />
-        </RouterLink>
-        <button
-          class="navbar-toggler bg-white"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse  justify-content-end navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <RouterLink to="/" class="nav-link text-white"> Home </RouterLink>
-            </li>
-            <li class="nav-item">
-              <RouterLink to="/about" class="nav-link text-white"> About </RouterLink>
-            </li>
-            <li class="nav-item">
-              <RouterLink to="/resume" class="nav-link text-white"> Resume </RouterLink>
-            </li>
-            <li class="nav-item">
-              <RouterLink to="/projects" class="nav-link text-white"> Projects </RouterLink>
-            </li>
-            <li class="nav-item">
-              <RouterLink to="/testimonials" class="nav-link text-white"> Reviews </RouterLink>
-            </li>
-            <li class="nav-item">
-              <RouterLink to="/contact" class="nav-link text-white"> Contact </RouterLink>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <div class="sidenav" :class="{ 'active': isNavOpen }" id="sidenav">
+    <div class="container">
+      <div class="logo">Mzwamadoda Louw</div>
+      <button class="toggle-btn" @click="toggleNav">☰</button>
     </div>
+    <hr>
+    <router-link to="/">Home</router-link>
+    <hr>
+    <router-link to="/about">About</router-link>
+    <hr>
+    <router-link to="/resume">Resume</router-link>
+    <hr>
+    <router-link to="/projects">Projects</router-link>
+    <hr>
+    <router-link to="/testimonials">Testimonials</router-link>
+    <hr>
+    <router-link to="/contact">Contact Me</router-link>
+    <hr>
+ </div>
 </template>
 
 <script>
-    export default {
-        name : 'NavbarComp'
-    }
+import EventBus from '../event-bus';
+import { ref } from 'vue';
+
+export default {
+  name: 'NavbarComp',
+  setup() {
+    const isNavOpen = ref(false);
+
+    const toggleNav = () => {
+      isNavOpen.value = !isNavOpen.value;
+      // Emit an event with the sidebar height
+      EventBus.$emit('sidebar-height', isNavOpen.value ? '100vh' : 'auto');
+    };
+
+    return { isNavOpen, toggleNav };
+  }
+}
 </script>
 
 <style scoped>
-
-nav{
-  box-shadow: .2vw .2vw .2vw .2vw;
-  color: white;
-  
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20rem;
 }
 
+.logo {
+  font-size: 150%;
+  color: transparent; /* Transparent text */
+  background: linear-gradient(to right, white, gold, black); /* Color gradient */
+  -webkit-background-clip: text; /* Clip text to the background */
+  animation: flowColors 5s linear infinite; /* Animation */
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0; /* Always visible on bigger screens */
+  background: linear-gradient(to bottom right, #ffffff, #000000);
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidenav a:hover {
+  color: gold;
+  font-size: 2rem;
+  transform: translateX(40px);
+  transform: translateY(-10px);
+}
+
+.toggle-btn {
+  display: none;
+  font-weight: 900;
+  position: fixed;
+  top: 10;
+  left:10;
+  padding: 1rem;
+}
+
+@keyframes flowColors {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidenav {
+    left: -200px; /* Initially hidden for small screens */
+    transition: left 0.5s; /* Add transition for toggle effect */
+  }
+
+  .toggle-btn {
+    display: block;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .sidenav.active {
+    left: 0; /* Slide in when active for small screens */
+  }
+}
 </style>

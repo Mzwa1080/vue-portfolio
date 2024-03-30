@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row footerRow ">
+    <div class="row footerRow  ">
       <p class="lead my-3">
         Mzwamadoda Louw Portfolio &copy;
         <span>
@@ -10,9 +10,9 @@
       <br />
       <p v-for="footerData in getContacts()" :key="footerData">
 
-        <span class="p-3" ><i :href="footerData.linkedin" class="bi bi-linkedin"></i></span>
-        <span class="p-3"  ><i :href="footerData.gitHub" class="bi bi-github"></i></span>
-        <span class="p-3" ><i :href="footerData.whatsApp" class="bi bi-whatsapp"></i></span>
+        <span class="p-3" ><a :href="footerData.linkedin" class="bi bi-linkedin"></a></span>
+        <span class="p-3"  ><a :href="footerData.gitHub" class="bi bi-github"></a></span>
+        <span class="p-3" ><a :href="footerData.whatsApp" class="bi bi-whatsapp"></a></span>
       </p>
     </div>
   </div>
@@ -29,13 +29,13 @@ export default {
   },
   methods : {
     getContacts(){
-        return this.$store.state.contacts
+      return this.$store.state.contacts
     }
-},
-
+  },
+  
   computed : {
     getLinks(){
-        return this.$store.dispatch('getData')
+      return this.$store.dispatch('getData')
     }
   },
   mounted(){
@@ -45,4 +45,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+a {
+  color: #2c3e50;
+}
+</style>

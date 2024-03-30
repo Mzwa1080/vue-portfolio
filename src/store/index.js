@@ -37,6 +37,7 @@ export default createStore({
       state.testimonials = value
     },
     setContacts(state,value){
+      console.log(value);
       state.contacts = value
     }
 
