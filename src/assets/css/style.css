@@ -31,7 +31,11 @@ body {
 }
 
 
-
+.content {
+  margin-top: 15rem;
+  transition: margin-left 0.3s ease; /* Add transition for smooth animation */
+  height: 100vh;
+}
 
 .containerLogo {
   display: flex;

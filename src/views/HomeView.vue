@@ -30,9 +30,6 @@ export default {
 }
 </script>
 
-<style scoped>
-.content {
-  transition: margin-left 0.3s ease; /* Add transition for smooth animation */
-  height: 100vh;
-}
+<style src="@/assets/css/style.css">
+
 </style>
