@@ -1,11 +1,9 @@
 <template>
-  <Navbar :isNavOpen="isNavOpen" @toggleNav="toggleNav"/>
-
-  <div class="container main" :style="{ 'padding-left': isNavOpen ? navWidth : '0' }">
-    <router-view></router-view>
+  <div>
+    <Navbar :isNavOpen="isNavOpen" @toggleNav="toggleNav"/>
+    <router-view />
+    <Footer :footerPosition="footerPosition" />
   </div>
-
-  <Footer :footerPosition="footerPosition" />
 </template>
 
 <script>
@@ -21,11 +19,11 @@ export default {
   setup() {
     const isNavOpen = ref(false);
     const navWidth = ref('200px');
-    const footerPosition = ref('100vh');
+    const footerPosition = ref('0');
 
     const toggleNav = () => {
       isNavOpen.value = !isNavOpen.value;
-      footerPosition.value = isNavOpen.value ? 'calc(100vh - 200px)' : '100vh';
+      footerPosition.value = isNavOpen.value ? '200px' : '0';
     };
 
     return { isNavOpen, navWidth, toggleNav, footerPosition };

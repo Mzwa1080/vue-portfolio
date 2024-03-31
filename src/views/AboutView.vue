@@ -1,14 +1,11 @@
 <template>
-  <div class="row d-flex">
-    <div class="row my-3">
+  <!-- <div class="row d-flex"> -->
+    <div class="row">
       <h1 class="about-me">About Me</h1>
 
     </div>
 
-    <div class="row my-3 row-box">
-      <div class="col ">
-        <img class="img-about animate__animated animate__bounceInUp animate__repeat-2"   src="https://i.ibb.co/JzG7Rrk/removed-bg.png" alt="">
-      </div>
+    <div class="row">
 
       <div v-if="getAbout" class="col my-5 about animate__animated animate__zoomIn ">
 
@@ -23,7 +20,7 @@
     </div>
 
 
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>

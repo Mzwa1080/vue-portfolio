@@ -2,7 +2,7 @@
   <div>
     <div class="row footerRow  ">
       <p class="lead my-3">
-        Mzwamadoda Louw Portfolio &copy;
+        Copyright &copy;
         <span>
           {{ currentYear }}
         </span>
@@ -12,7 +12,9 @@
 
         <span class="p-3" ><a :href="footerData.linkedin" class="bi bi-linkedin"></a></span>
         <span class="p-3"  ><a :href="footerData.gitHub" class="bi bi-github"></a></span>
-        <span class="p-3" ><a :href="footerData.whatsApp" class="bi bi-whatsapp"></a></span>
+        <span class="p-3" ><a :href="'whatsapp://send?phone=' + footerData.whatsApp" class="bi bi-whatsapp"></a></span>
+        <span class="p-3"><a href="mailto:mshawnlouw@gmail.com" class="bi bi-envelope"></a></span>
+
       </p>
     </div>
   </div>
