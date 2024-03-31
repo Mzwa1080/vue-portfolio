@@ -1,90 +1,89 @@
 <template>
-  <!-- <div class="row d-flex"> -->
+  <div class="about-container">
     <div class="row">
-      <h1 class="about-me">About Me</h1>
+      <h1><span class="underlined">About </span>  Me  </h1>
 
     </div>
 
-    <div class="row">
+    <div class="row d-flex justify-content-center mt-5">
+      <div class="card m-5">
+        <div class="card-body">
+          <div class="row mb-5">
+            <div class="col-md-6 col-12">
+              <img src="https://i.ibb.co/YRB9mcJ/DSC-0268.jpg" height="300px" width="300px" class="circle-img" alt="Mzwamadoda Louw">
+            </div>
+            <div class="col-md-6 col-12  mt-5">
+              <h5>
+                Date of Birth : 02 April 1999
+              </h5>
+              <h5>
+                Phone No. : +27 79 440 8723
+              </h5>
+              <h5>
+                Location : Khayelitsha, Cape Town
+              </h5>
+              <h5>
+                Email : mshawnlouw@gmail.com
+              </h5>
+              <h5>
+                Nationality : South African
+              </h5>
+              <h5>
+                Languages : Isixhosa, English
+              </h5>
+            </div>
+          </div>
 
-      <div v-if="getAbout" class="col my-5 about animate__animated animate__zoomIn ">
+          <div class="row">
+            <div class="col-md-12 col-12">
+              <p>I've gained strong skills in web development from Life Choices Academy and assisting others with coding bugs has opened my eyes. I want to start my career as a front-end developer, making websites look great and easy to use. <br> <br> Later on, I'd like to work in Quality Assurance to make sure software works perfectly.</p>
+              <p>Besides coding, I'm really interested in finance and trading. I follow financial news closely and enjoy analyzing market trends. I'm excited to see what the future holds in both technology and finance.</p>
+            </div>
 
-        <p class="my-5" v-for="about in getAbout()" :key="about">
-          {{ about }}
- 
-        </p>
-      </div>
-      <div v-else>
-        <Spinner />
+          </div>
+        </div>
       </div>
     </div>
-
-
-  <!-- </div> -->
+  
+  </div>
 </template>
 
 <script>
-import Spinner from '@/components/Spinner.vue';
-
-
 export default {
-    // returns the about changed value in the state
-    methods: {
-        getAbout() {
-            return this.$store.state.about;
-        }
-    },
-    computed: {
-        // gets the data from the store
-        displayData() {
-            return this.$store.dispatch('getData');
-        }
-    },
-    // mounted, adds the data function in the page
-    mounted() {
-        this.displayData;
-    },
-    components: { Spinner }
+  components: {}
 }
-
 </script>
 
-
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Londrina+Solid&family=Roboto:wght@100;300&family=Salsa&display=swap');
-
-h1, p{
-  font-family: 'Lobster', sans-serif;
-font-family: 'Londrina Solid', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Salsa', cursive;
-}
-.img-about{
-  width: 70%;
-}
-p{
-  color: black;
-}
-
 .about-me{
-  font-size: 3rem;
-  color: #42b983;
+  font-size: 40px;
 
 }
-
-.about{
-  font-size: 1.3rem;
+.underlined {
+  text-decoration: underline; /* Add underline */
+  text-decoration-color: gold; /* Set underline color to gold */
 }
-.row-box{
-  box-shadow: .2vw .2vw .2vw .2vw;
-  color: #42b983;
+.about-container {
+  margin-left: 100px;
+  margin-bottom: 200px; /* Add margin to push the content above the footer */
+  height: auto; /* Allow content to determine height */
 }
-
-@media screen and (width = 300px) {
-  .about {
-    font-size: .5rem;
-  }
+.card-body {
+  color: white;
 }
-
+.card{
+  box-shadow: .1vw .1vw .6vw .1vw ;
+  color: gold ;
+  background-color: transparent;
+  border-radius: 5rem;
+  width: 80%;
+  margin-left: 150px;
+}
+.circle-img{
+  border-radius: 80%;
+  box-shadow: .06vw .1vw .1vw .1vw ;
+  color: gold ;
+  overflow: hidden;
+}
 
 </style>

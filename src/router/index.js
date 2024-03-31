@@ -6,9 +6,9 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomeView,
-    props : {
-     isNavOpen: true, navWidth: '200px' 
-    }
+    // props : {
+    //  isNavOpen: true, navWidth: '200px' 
+    // }
   },
   {
     path: '/about',

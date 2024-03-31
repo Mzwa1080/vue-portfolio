@@ -1,7 +1,7 @@
 <template>
   <div class="sidenav" :class="{ 'active': isNavOpen , 'true':isNavOpen}" id="sidenav">
     <div class="containerLogo">
-      <div class="logo">Mzwamadoda Louw</div>
+      <div class="logo">M L</div>
       <button class="toggle-btn" @click="toggleNav">☰</button>
     </div>
     <hr>

@@ -1,9 +1,10 @@
 <template>
-  <div>
     <Navbar :isNavOpen="isNavOpen" @toggleNav="toggleNav"/>
+
     <router-view />
+
+
     <Footer :footerPosition="footerPosition" />
-  </div>
 </template>
 
 <script>
