@@ -27,7 +27,7 @@ body {
   text-align: center;
   color: #fff;
   flex: 1;
-  height: auto;
+  /* height: auto; */
   
 }
 .container {
@@ -45,16 +45,7 @@ body {
   justify-content: center;
   height: 15rem;
 }
-.gradient-background {
-  background: linear-gradient(to bottom right, #ffffff, #000000);
-  height: auto; /* Take the whole height of the viewport */
-  color: #fff; /* Text color for better readability */
-}
-.transparent-background {
-  background: linear-gradient(to bottom right, #ffd700, #000000);
-  height: auto; /* Take the whole height of the viewport */
-  color: #fff; /* Text color for better readability */
-}
+
 @media screen and (max-width: 768px) {
   .about-container {
     margin: 1rem; /* Remove margin-left for screens smaller than 700px */

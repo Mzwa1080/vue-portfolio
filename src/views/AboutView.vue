@@ -31,6 +31,9 @@
               <h5>
                 Languages : Isixhosa, English
               </h5>
+              <h5>
+                Hobbies : Listening to music, analyzing the markets and fixing cell phones.
+              </h5>
             </div>
           </div>
 
@@ -64,7 +67,7 @@ export default {
   text-decoration-color: gold; /* Set underline color to gold */
 }
 .about-container {
-  margin-left: 100px;
+  margin-left: 150px;
   margin-bottom: 200px; /* Add margin to push the content above the footer */
   height: auto; /* Allow content to determine height */
 }
@@ -84,6 +87,26 @@ export default {
   box-shadow: .06vw .1vw .1vw .1vw ;
   color: gold ;
   overflow: hidden;
+}
+
+@media (max-width: 860px) {
+  .about-container {
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+    .card {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .circle-img {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
 }
 
 </style>

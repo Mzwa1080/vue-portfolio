@@ -5,10 +5,10 @@
       <span>{{ currentYear }}</span>
     </p>
     <p v-for="footerData in getContacts()" :key="footerData">
-      <span class="p-2"><a :href="footerData.linkedin" class="bi bi-linkedin"></a></span>
-      <span class="p-2"><a :href="footerData.gitHub" class="bi bi-github"></a></span>
-      <span class="p-2"><a :href="'whatsapp://send?phone=' + footerData.whatsApp" class="bi bi-whatsapp"></a></span>
-      <span class="p-2"><a href="mailto:mshawnlouw@gmail.com" class="bi bi-envelope"></a></span>
+      <span class="p-2"><a :href="footerData.linkedin" target="_blank"  class="bi bi-linkedin"></a></span>
+      <span class="p-2"><a :href="footerData.gitHub" target="_blank" class="bi bi-github"></a></span>
+      <span class="p-2"><a :href="'whatsapp://send?phone=' + footerData.whatsApp" target="_blank" class="bi bi-whatsapp"></a></span>
+      <span class="p-2"><a href="mailto:mshawnlouw@gmail.com" target="_blank" class="bi bi-envelope"></a></span>
     </p>
   </div>
 </template>
