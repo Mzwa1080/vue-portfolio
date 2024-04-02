@@ -8,7 +8,7 @@
     <div  v-if="skills" class="row info  d-flex justify-content-center">
       
       <div class="card align-items-center m-4" v-for="skill in skills() " :key="skill">
-        <img class="mt-2" height="80%" width="80%"
+        <img class="mt-2" height="60%" width="80%"
           :src="skill.img" alt="HTML5 Icon">
         <p>{{ skill.title }}</p>
       </div>

@@ -56,12 +56,10 @@ p span a {
   color: #2c3e50;
   position: fixed;
   bottom: 0;
-  left: 0;
   width: 100%;
   z-index: 100; /* Ensure the footer stays above other content */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
   height: 8rem;
   font-size: 20px;
-
 }
 </style>

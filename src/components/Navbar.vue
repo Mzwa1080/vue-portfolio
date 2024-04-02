@@ -1,9 +1,12 @@
 <template>
   <div class="sidenav" :class="{ 'active': isNavOpen , 'true':isNavOpen}" id="sidenav">
     <div class="containerLogo">
-      <div class="logo">M L</div>
-      <button class="toggle-btn" @click="toggleNav">☰</button>
-    </div>
+      <div class="logo" href="/">M L</div>
+      <button class="toggle-btn" @click="toggleNav">
+        <template v-if="!isNavOpen">☰</template> <!-- Display when closed -->
+        <template v-else>✕</template> <!-- Display when opened -->
+      </button>    </div>
+    
     <hr>
     <router-link to="/">Home</router-link>
     <hr>
