@@ -1,11 +1,13 @@
 <template>
 
   <div class="container">
-    <div class="row">
-      <h1 class="my-4"> My Skills</h1>
+    <div class="row info">
+      <h1 class="my-4"><u>
+        My Skills
+      </u> </h1>
     </div>
 
-    <div  v-if="skills" class="row info  d-flex justify-content-center">
+    <div  v-if="skills" class="row info   d-flex justify-content-center">
       
       <div class="card align-items-center m-4" v-for="skill in skills() " :key="skill">
         <img class="mt-2" height="60%" width="80%"
@@ -17,7 +19,7 @@
 
 
     <div class="row mt-5 info mb-5 pb-5">
-      <h1 class="mb-5">Education </h1>
+      <h1 class="mb-5"> <u> Education </u></h1>
 
   <ul>
       <li v-for="education in getEducation()" :key="education.id" :style="{ '--accent-color': education.accentColor }">

@@ -3,8 +3,8 @@
 
 body {
   background: linear-gradient(to bottom right, #000, #2c3e50, white);
-  background-size: 105% 120% ; /* Double the size to cover the entire element */
-  animation: moveBackground 2s linear infinite  alternate;
+  background-size: 115% 140% ; /* Double the size to cover the entire element */
+  animation: moveBackground 1.5s linear infinite  alternate;
   overflow-x: hidden; /* Prevent horizontal scrolling */
 
 }

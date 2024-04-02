@@ -6,7 +6,42 @@
 
   <div v-if="testimonialData" class="col">
 
-    <div class="row  gap-4"> 
+
+    <div class="row" :key="review">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <!-- Loop through testimonialData() and create carousel items -->
+      <div v-for="(review, index) in testimonialData()" :key="index" class="carousel-item" :class="{ 'active': index === 0 }">
+        <img :src="review.image" class="d-block w-100" :alt="'Slide ' + (index + 1)">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>{{ review.title }}</h5>
+          <p>{{ review.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+</div>
+
+
+    <!-- <div class="row  gap-4"> 
       <div class="card col-2 shadow p-3 mb-5  " :class="review.name" v-for="review in testimonialData()" :key="review" style="width: 18rem;" >
         <img loading="lazy" :src=review.profile class="card-img-top h-50" alt="..." />
         <div class="card-body">
@@ -18,15 +53,11 @@
         </div>
   
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <Spinner />
-  </div>
+    </div> -->
+
 </template>
 
 <script>
-import Spinner from '@/components/Spinner.vue';
 
 export default {
     methods: {
@@ -42,7 +73,7 @@ export default {
     mounted() {
         this.getTestimonials;
     },
-    components: { Spinner }
+    components: {  }
 };
 </script>
 

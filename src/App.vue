@@ -1,7 +1,7 @@
 <template>
     <Navbar :isNavOpen="isNavOpen" @toggleNav="toggleNav"/>
 
-    <router-view />
+    <router-view class="animate animated_" />
 
 
     <Footer :footerPosition="footerPosition" />
