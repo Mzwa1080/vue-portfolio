@@ -1,14 +1,14 @@
 <template>
   <div class="container">
     <div class="row mb-5">
-      <div class="col-md-8 mx-auto text-center">
-        <h6 class="text-primary">CONTACT</h6>
+      <div class="col-md-8 mt-5 mx-auto text-center">
         <h1>Get In Touch</h1>
       </div>
     </div>
 
-    <div class="row">
-      <svg
+    <div class="row mb-5 push">
+      <div class="col">
+        <svg
         xmlns="http://www.w3.org/2000/svg"
         width="50"
         height="50"
@@ -65,12 +65,14 @@
         <a href="https://www.google.com/maps/dir/-34.0233805,18.6294385/34+Nqawe+St,+Village+1+North,+Cape+Town,+7784/@-34.0345311,18.5951115,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x1dcc48da53b104f7:0x233999fa76e5a168!2m2!1d18.6567347!2d-34.0430255?entry=ttu"></a>
         Khayelitsha, Cape Town
       </p>
+      </div>
+      
 
       <div class="col">
         <iframe
-          :width="250"
+          :width="450"
           src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d52901.825027133586!2d18.595111540012073!3d-34.0345311296052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d-34.0233805!2d18.6294385!4m5!1s0x1dcc48da53b104f7%3A0x233999fa76e5a168!2s34%20Nqawe%20St%2C%20Village%201%20North%2C%20Cape%20Town%2C%207784!3m2!1d-34.0430255!2d18.656734699999998!5e0!3m2!1sen!2sza!4v1712137209409!5m2!1sen!2sza"
-          :height="250"
+          :height="350"
           style="border: 0"
           allowfullscreen=""
           loading="lazy"
@@ -99,5 +101,9 @@ a {
 }
 .row-box {
   box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw;
+}
+.container{
+  margin-bottom: 200px;
+overflow-x: hidden;
 }
 </style>

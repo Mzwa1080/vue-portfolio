@@ -72,10 +72,22 @@ export default {
 }
 
 .font-quotes {
-  font-size: 1rem; /* Adjust as needed */
+  font-size: .8rem; /* Adjust as needed */
 } 
 
 .wrapper {
-  margin-bottom: 20px;
+  margin-bottom: 200px;
+  margin-left: 150px;
+}
+
+@media screen and (max-width: 768px) {
+  .font-quotes {
+    font-size: .6rem;   
+  }
+  .carousel-caption{
+  color: white;
+  padding: 2px;
+  text-align: center;
+  }
 }
 </style>
