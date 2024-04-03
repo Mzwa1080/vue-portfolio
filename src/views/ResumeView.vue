@@ -1,46 +1,106 @@
 <template>
-  
   <div class="container">
     <div class="row mt-5 info mb-5 pb-5">
-      <h1 class="mb-5"> <u> Education & Experience</u></h1>
-  
-  <ul>
-      <li v-for="education in getEducation()" :key="education.id" :style="{ '--accent-color': education.accentColor }">
-        <div class="date">{{ education.year }}</div>
-        <div class="title">{{ education.place }}</div>
-        <div class="descr">{{ education.description }}</div>
-      </li>
-  
-    </ul>
-  
-    </div>
-    <div class="row info">
-      <h1 class="my-4"><u>
-        My Skills
-      </u> </h1>
+      <h1 class="mb-5"><u> Education & Experience</u></h1>
+
+      <ul>
+        <li
+          v-for="education in getEducation()"
+          :key="education.id"
+          :style="{ '--accent-color': education.accentColor }"
+        >
+          <div class="date">{{ education.year }}</div>
+          <div class="title">{{ education.place }}</div>
+          <div class="descr">{{ education.description }}</div>
+        </li>
+      </ul>
     </div>
 
-    <div  v-if="skills" class="row info   d-flex justify-content-center">
-      
-      <div class="card align-items-center m-4" v-for="skill in skills() " :key="skill">
-        <img class="mt-2" height="60%" width="80%"
-          :src="skill.img" alt="HTML5 Icon">
-        <p>{{ skill.title }}</p>
+    <div class="row info d-flex justify-content-center">
+      <h1>Work Experience</h1>
+
+      <div class="card col-md-6 m-4">
+        <div class="card-header">CodeTelligence Academy</div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>
+              Role : High School Coding Mentor <br> <br />
+              Year : 2023 Feb - 2023 Sep <br> <br />
+
+              Responsibilities : Delivering content to High School Learners.
+              Compiling weekly content, quizzes and projects.
+            </p>
+            
+          </blockquote>
+        </div>
       </div>
 
+      <div class="card col-md-6 m-4">
+        <div class="card-header">Ntinga Information Systems</div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>
+              Role : General Assistant <br> <br>
+            Year : 2021 Nov - 2022 Nov <br> <br>
+  
+            Responsibilities : Installing cameras and troubleshooting networks. | Assisting on picking and packing, computer components and delivery.
+            </p>
+            
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="card col-md-6 m-4">
+        <div class="card-header">Nchimbi Digital Studios</div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>
+              Role : Phototgrapher & Videographer <br> <br>
+            Year : 2019 Feb - 2021 Oct  <br> <br>
+  
+            Responsibilities : Operate  video cameras, including DSLRs and camcorders.
+Utilize camera movements, tilting, zooming, and lighting, to enhance storytelling and capture dynamic shots at various events.
+            </p>
+            
+          </blockquote>
+        </div>
+      </div>
+    
+    <!-- <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Nchimbi Digital Studios</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary" data-mdb-ripple-init>Linkedin</a>
+      </div>
+    </div>
+  </div> -->
     </div>
 
+    <div class="row info">
+      <h1 class="my-4"><u> My Skills </u></h1>
+    </div>
 
-
-    
+    <div v-if="skills" class="row info skills d-flex justify-content-center">
+      <div
+        class="cardSkills align-items-center m-4"
+        v-for="skill in skills()"
+        :key="skill"
+      >
+        <img
+          class="mt-2"
+          height="60%"
+          width="80%"
+          :src="skill.img"
+          alt="HTML5 Icon"
+        />
+        <p>{{ skill.title }}</p>
+      </div>
+    </div>
   </div>
-
-
-
 </template>
 
 <script>
-
 export default {
   methods: {
     // get the state value of each variable
@@ -60,44 +120,64 @@ export default {
     this.displayEducationData;
     // this.getSkills
   },
-  components: {  },
+  components: {},
 };
 </script>
 
 <style scoped>
+.skills {
+  margin-bottom: 200px;
+}
 
 .card {
+  height: auto;
+  border-radius: 26px;
+  box-shadow: 35px 35px 68px 0px rgba(222, 219, 28, 0.518),
+    inset -8px -8px 16px 0px rgba(91, 115, 187, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+  transition: all 0.3s;
+  background-color: transparent;
+  color: white;
+}
+
+.cardd {
+  width: 400px;
+  height: auto;
+  border-radius: 26px;
+  box-shadow: 35px 35px 68px 0px rgba(222, 219, 28, 0.518),
+    inset -8px -8px 16px 0px rgba(91, 115, 187, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.cardSkills {
   width: 200px;
   height: 200px;
   backdrop-filter: blur(7px);
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 26px;
-  box-shadow: 35px 35px 68px 0px rgba(255, 253, 157, 0.2), inset -8px -8px 16px 0px rgba(173, 175, 181, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);
+  box-shadow: 35px 35px 68px 0px rgba(255, 253, 157, 0.2),
+    inset -8px -8px 16px 0px rgba(173, 175, 181, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
   transition: all 0.3s;
   cursor: pointer;
 }
 
-.card:hover {
+.cardSkills:hover {
   box-shadow: 35px 35px 68px 0px rgba(255, 253, 157, 0.214);
 }
 
-.card:active {
+.cardSkills:active {
   transform: scale(0.95);
   border: 1px solid gold;
 }
 
-
 @media (min-width: 760px) {
-  .info{
+  .info {
     margin-left: 150px;
   }
-
-
 }
-
-
-
-
 
 ul {
   --col-gap: 2rem;
@@ -258,7 +338,4 @@ ul li .descr::before {
     border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
   }
 }
-
-
-
 </style>

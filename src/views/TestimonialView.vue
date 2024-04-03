@@ -12,7 +12,7 @@
               <!-- Loop through testimonialData and create carousel items -->
               <div v-for="(testimonial, index) in testimonialData()" :key="index" class="carousel-item" :class="{ 'active': index === 4 }">
                 <div class="d-flex justify-content-center align-items-center" style="height: 500px;">
-                  <img :src="testimonial.profile" class="img-fluid" style="max-height: 80%; max-width: 80%;" :class="testimonial.name" alt="Profile Picture">
+                  <img :src="testimonial.profile" loading="lazy" class="img-fluid" style="max-height: 80%; max-width: 80%;" :class="testimonial.name" alt="Profile Picture">
                 </div>
                 <div class="carousel-caption">
                   <p class="font-quotes-5">{{ testimonial.name }} {{ testimonial.surname }}</p>
@@ -86,7 +86,7 @@ export default {
   }
   .carousel-caption{
   color: white;
-  padding: 2px;
+  padding: 5px;
   text-align: center;
   }
 }
