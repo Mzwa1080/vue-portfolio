@@ -35,9 +35,13 @@
       </div>
     </div>
   </div>
+
+  <Footer />
 </template>
 
 <script>
+import Footer from '@/components/Footer.vue';
+
 export default {
   methods: {
     testimonialData() {
@@ -52,7 +56,7 @@ export default {
   mounted() {
     this.getTestimonials;
   },
-  components: {}
+  components: {Footer}
 };
 </script>
 
@@ -76,7 +80,6 @@ export default {
 } 
 
 .wrapper {
-  margin-bottom: 200px;
   margin-left: 150px;
 }
 

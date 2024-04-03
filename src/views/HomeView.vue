@@ -19,15 +19,17 @@
 
 
   </div>
+
+
+  <Footer />
 </template>
 
 <script>
+import Footer from '@/components/Footer.vue';
+
 export default {
-  name: 'HomeView',
-  // props: {
-  //   isNavOpen: Boolean,
-  //   navWidth: String
-  // }
+    name: 'HomeView',
+    components: { Footer }
 }
 </script>
 

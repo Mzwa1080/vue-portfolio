@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container animate__animated animate__backInRight">
     <div class="row mt-5 info mb-5 pb-5">
       <h1 class="mb-5"><u> Education & Experience</u></h1>
 
@@ -18,7 +18,20 @@
 
     <div class="row info d-flex justify-content-center">
       <h1>Work Experience</h1>
+      <div class="card col-md-6 m-4">
+        <div class="card-header">Life Choices Academy</div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>
+              Role : Full Stack Web Developer <br> <br />
+              Year : 2024 April - Present <br> <br />
 
+              Responsibilities : Building dynamic web application, using both front-end and back-end technologies.
+            </p>
+            
+          </blockquote>
+        </div>
+      </div>
       <div class="card col-md-6 m-4">
         <div class="card-header">CodeTelligence Academy</div>
         <div class="card-body">
@@ -98,9 +111,14 @@ Utilize camera movements, tilting, zooming, and lighting, to enhance storytellin
       </div>
     </div>
   </div>
+
+  <Footer />
+
 </template>
 
 <script>
+  import Footer from '@/components/Footer.vue'; 
+
 export default {
   methods: {
     // get the state value of each variable
@@ -120,7 +138,7 @@ export default {
     this.displayEducationData;
     // this.getSkills
   },
-  components: {},
+  components: {Footer},
 };
 </script>
 

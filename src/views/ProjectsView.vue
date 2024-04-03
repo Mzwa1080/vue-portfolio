@@ -14,18 +14,18 @@
             <div class="">
   
             </div>
-            <button type="button" class=" btn btn-success">
-              <a :href="project.github" target="_blank">
+            <a :href="project.gitHub" target="_blank">
+            <button type="button" class=" btn buttonn">
                 Github
-              </a>
-              
-            </button>
-            <button type="button" class="btn btn-success">
-              <a :href="project.github" target="_blank">
+                
+              </button>
+            </a>
+            <a :href="project.netlify" target="_blank">
+            <button type="button" class="btn buttonn">
                 Netlify
-              </a>
-              
-            </button>
+                
+              </button>
+            </a>
           </div>
         </div>
   
@@ -63,13 +63,17 @@
       </div>
     </div>
   </div>
+
+
+  <Footer />
 </template>
 
 <script>
 // import Spinner from '@/components/Spinner.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
-  components: {},
+  components: { Footer},
   methods: {
     getProjects() {
       return this.$store.state.projects;
@@ -88,6 +92,11 @@ export default {
 </script>
 
 <style scoped>
+.buttonn{
+  margin: 5px;
+  background-color: #2c3e50;
+  color: white;
+}
 @media screen and (min-width: 768px) {
   .projects-content {
     margin-left: 250px;

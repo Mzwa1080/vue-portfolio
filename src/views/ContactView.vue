@@ -1,29 +1,35 @@
 <template>
-  <div class="container">
+<div class="container">
     <div class="row mb-5">
       <div class="col-md-8 mt-5 mx-auto text-center">
         <h1>Get In Touch</h1>
       </div>
     </div>
-
     <div class="row mb-5 push">
+  <div class="col">
+    <form action="https://formspree.io/f/xzbnzbzd" method="POST" class="row g-3 justify-content-center">
+      <div class="col-md-5">
+        <input type="text" name="fullName" class="form-control" placeholder="Full Name" />
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="email" class="form-control" placeholder="Enter E-mail" />
+      </div>
+      <div class="col-md-10">
+        <input type="text" name="title" class="form-control" placeholder="Enter Subject" />
+      </div>
+      <div class="col-md-10">
+        <textarea name="Message" id="" cols="30" rows="5" class="form-control" placeholder="Enter Message"></textarea>
+      </div>
+      <div class="col-md-10 d-grid">
+        <button class="btn btn-primary" type="submit">Contact</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="col">
+    <div class="row">
       <div class="col">
-        <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="50"
-        height="50"
-        color="gold"
-        fill="currentColor"
-        class="col bi bi-telephone-inbound"
-        viewBox="0 0 16 16"
-      >
-        <path
-          d="M15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0m-12.2 1.182a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
-        />
-      </svg>
-      <p>
-        <a href="https://wa.me/+27794408723"> +27 79 440 8723 </a>
-      </p>
+
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="50"
@@ -45,7 +51,24 @@
           mshawnlouw@gmail.com
         </a>
       </p>
-      <svg
+      
+
+
+      </div>
+      <div class="col">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" color="gold" fill="currentColor" class="col bi bi-envelope-at" viewBox="0 0 16 16">
+          <path
+          d="M15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0m-12.2 1.182a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
+        />       
+       </svg>
+        <p>
+          <a href="mailto:mshawnlouw@gmail.com" style="text-decoration: none">mshawnlouw@gmail.com</a>
+        </p>
+      </div>
+     
+      <div class="col">
+
+        <svg
         xmlns="http://www.w3.org/2000/svg"
         width="50"
         height="50"
@@ -57,53 +80,57 @@
         <path
           d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"
         />
-        <path
-          d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
-        />
+        
       </svg>
       <p>
         <a href="https://www.google.com/maps/dir/-34.0233805,18.6294385/34+Nqawe+St,+Village+1+North,+Cape+Town,+7784/@-34.0345311,18.5951115,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x1dcc48da53b104f7:0x233999fa76e5a168!2m2!1d18.6567347!2d-34.0430255?entry=ttu"></a>
         Khayelitsha, Cape Town
       </p>
-      </div>
-      
 
-      <div class="col">
-        <iframe
-          :width="450"
-          src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d52901.825027133586!2d18.595111540012073!3d-34.0345311296052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d-34.0233805!2d18.6294385!4m5!1s0x1dcc48da53b104f7%3A0x233999fa76e5a168!2s34%20Nqawe%20St%2C%20Village%201%20North%2C%20Cape%20Town%2C%207784!3m2!1d-34.0430255!2d18.656734699999998!5e0!3m2!1sen!2sza!4v1712137209409!5m2!1sen!2sza"
-          :height="350"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+
       </div>
 
     </div>
+
   </div>
+  
+</div>
+
+
+
+
+  </div>
+
+
+<Footer />
 </template>
 
 <script>
-export default {};
+import Footer from '@/components/Footer.vue';
+export default {
+  components : {
+    Footer
+  }
+
+};
 </script>
 
 <style scoped>
-@media screen and (min-width: 768px) {
-  .container {
-    margin-left: 150px;
+ @media screen and (max-width: 768px) {
+    .push {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .col {
+      width: 100%;
+    }
+    .row-box {
+      box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw;
+    }
   }
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-.row-box {
-  box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw;
-}
-.container{
-  margin-bottom: 200px;
-overflow-x: hidden;
-}
+  a {
+    text-decoration: none;
+    color: white;
+  }
 </style>

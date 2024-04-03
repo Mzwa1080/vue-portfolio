@@ -12,7 +12,7 @@
     <hr>
     <router-link to="/about">About</router-link>
     <hr>
-    <router-link to="/resume">Education</router-link>
+    <router-link to="/resume">Education  &<br> Experience</router-link>
     <hr>
     <router-link to="/projects">Projects</router-link>
     <hr>
