@@ -1,5 +1,5 @@
 <template>
-  <div class="about-container">
+  <div class="about-container animate__animated animate__backInRight">
     <div class="row">
       <h1><span class="underlined">About </span>  Me  </h1>
 

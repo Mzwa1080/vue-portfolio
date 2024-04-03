@@ -1,6 +1,19 @@
 <template>
-
+  
   <div class="container">
+    <div class="row mt-5 info mb-5 pb-5">
+      <h1 class="mb-5"> <u> Education & Experience</u></h1>
+  
+  <ul>
+      <li v-for="education in getEducation()" :key="education.id" :style="{ '--accent-color': education.accentColor }">
+        <div class="date">{{ education.year }}</div>
+        <div class="title">{{ education.place }}</div>
+        <div class="descr">{{ education.description }}</div>
+      </li>
+  
+    </ul>
+  
+    </div>
     <div class="row info">
       <h1 class="my-4"><u>
         My Skills
@@ -18,19 +31,6 @@
     </div>
 
 
-    <div class="row mt-5 info mb-5 pb-5">
-      <h1 class="mb-5"> <u> Education </u></h1>
-
-  <ul>
-      <li v-for="education in getEducation()" :key="education.id" :style="{ '--accent-color': education.accentColor }">
-        <div class="date">{{ education.year }}</div>
-        <div class="title">{{ education.place }}</div>
-        <div class="descr">{{ education.description }}</div>
-      </li>
-
-    </ul>
-
-    </div>
 
     
   </div>

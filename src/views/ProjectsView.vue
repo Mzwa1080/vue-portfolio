@@ -1,6 +1,6 @@
 <template>
   <h1>Projects</h1>
-  <div class="container  ">
+  <div class="container animate__animated animate__backInRight">
     <div class="projects-content">
 
       <div class="row d-flex justify-content-center my-3 mb-5 align-items-center">

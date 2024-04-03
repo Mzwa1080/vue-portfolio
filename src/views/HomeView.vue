@@ -1,5 +1,5 @@
 <template>
-  <div class="content" >
+  <div class="content animate__animated animate__backInUp" >
     <div class="row justify-content-center">
       <div class="col-md-12">
         <div class="">
