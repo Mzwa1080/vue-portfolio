@@ -16,7 +16,7 @@
     <hr>
     <router-link to="/projects">Projects</router-link>
     <hr>
-    <router-link to="/testimonials">Testimonials</router-link>
+    <router-link to="/testimonials">Reviews</router-link>
     <hr>
     <router-link to="/contact">Contact Me</router-link>
     <hr>
