@@ -1,9 +1,9 @@
 <template>
-  <h1>Projects</h1>
   <div class="container animate__animated animate__backInRight">
     <div class="projects-content">
-
+      
       <div class="row d-flex justify-content-center my-3 mb-5 align-items-center">
+        <h1>Projects</h1>
         <div class="card m-4" v-for="project in getProjects()" :key="project">
           <img :src="project.image" alt="" />
           <div class="card__content">
