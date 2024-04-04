@@ -23,7 +23,7 @@
         <div class="card-body">
           <blockquote class="blockquote mb-0">
             <p>
-              Role : Full Stack Web Developer <br> <br />
+              Role : LC Studio Intern <br> <br />
               Year : 2024 April - Present <br> <br />
 
               Responsibilities : Building dynamic web application, using both front-end and back-end technologies.
