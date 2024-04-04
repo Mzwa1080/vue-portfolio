@@ -81,7 +81,9 @@ export default {
 
 .wrapper {
   margin-left: 150px;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 768px) {

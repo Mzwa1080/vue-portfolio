@@ -6,7 +6,7 @@
     </div>
 
     <div class="row d-flex justify-content-center ">
-      <div class="card m-5">
+      <div class="card m-2">
         <div class="card-body">
           <div class="row mb-3">
             <div class="col-md-6 col-12">
@@ -73,6 +73,7 @@ export default {
 }
 .about-container {
   margin-left: 150px;
+  margin-bottom: 2rem;
   /* margin-bottom: 200px; Add margin to push the content above the footer */
   height: auto; /* Allow content to determine height */
 }

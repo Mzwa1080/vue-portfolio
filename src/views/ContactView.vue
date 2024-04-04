@@ -18,7 +18,7 @@
         <input type="text" name="title" class="form-control" placeholder="Enter Subject" />
       </div>
       <div class="col-md-10">
-        <textarea name="Message" id="" cols="30" rows="5" class="form-control" placeholder="Enter Message"></textarea>
+        <textarea name="message" id="" cols="30" rows="5" class="form-control" placeholder="Enter Message"></textarea>
       </div>
       <div class="col-md-10 d-grid">
         <button class="btn btn-primary" type="submit">Contact</button>
@@ -61,7 +61,7 @@
         />       
        </svg>
         <p>
-          <a href="mailto:mshawnlouw@gmail.com" style="text-decoration: none">mshawnlouw@gmail.com</a>
+          <a href="" style="text-decoration: none">+27 79 440 8723</a>
         </p>
       </div>
      
