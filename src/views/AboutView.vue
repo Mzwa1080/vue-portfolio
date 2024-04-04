@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-6 col-12  mt-5">
               <h5>
-                Date of Birth : 02 April 1999
+                Date of Birth : 02/04/1999
               </h5>
               <h5>
                 Phone No. : +27 79 440 8723

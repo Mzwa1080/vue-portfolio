@@ -1,15 +1,15 @@
 <template>
   <div class="footerRow">
-    <p class=" ">
-      Copyright &copy;
-      <span>{{ currentYear }}</span>
-    </p>
-    <p   v-for="footerData in getContacts()" :key="footerData">
-      <span class="m-2"><a :href="footerData.linkedin" target="_blank"  class="bi bi-linkedin"></a></span>
-      <span class="m-2"><a :href="footerData.gitHub" target="_blank" class="bi bi-github"></a></span>
-      <span class="m-2"><a :href="'whatsapp://send?phone=' + footerData.whatsApp" target="_blank" class="bi bi-whatsapp"></a></span>
-      <span class="m-2"><a href="mailto:mshawnlouw@gmail.com" target="_blank" class="bi bi-envelope"></a></span>
-    </p>
+    <p> Copyright &copy;<span>{{ currentYear }}</span></p>
+    <div class="row">
+
+      <i   v-for="footerData in getContacts()" :key="footerData">
+        <span class="m-2  icons"><a :href="footerData.linkedin" target="_blank"  class="bi bi-linkedin"></a></span>
+        <span class="m-2 icons"><a :href="footerData.gitHub" target="_blank" class="bi bi-github"></a></span>
+        <span class="m-2 icons"><a :href="'whatsapp://send?phone=' + footerData.whatsApp" target="_blank" class="bi bi-whatsapp"></a></span>
+        <span class="m-2 icons"><a href="mailto:mshawnlouw@gmail.com" target="_blank" class="bi bi-envelope"></a></span>
+      </i>
+    </div>
   </div>
 </template>
 
@@ -49,6 +49,11 @@ p span a {
   text-decoration: none;
   color: #2c3e50;
 }
+.icons{
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
 
 .footerRow {
   background: linear-gradient(to bottom right, #ffd700, #000000); /* Gradient background */
@@ -59,7 +64,7 @@ p span a {
   width: 100%;
   z-index: 100; /* Ensure the footer stays above other content */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  height: 5rem;
-  font-size: 20px;
+  height: auto;
+  font-size: 15px;
 }
 </style>

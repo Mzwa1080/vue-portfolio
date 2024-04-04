@@ -2,7 +2,7 @@
   <div class="content animate__animated animate__backInUp" >
     <div class="row justify-content-center">
       <div class="col-md-12">
-          <img class="img-fluid" src="https://i.ibb.co/JzG7Rrk/removed-bg.png" alt="Mzwamadoda Louw">
+          <img class="mzwa" src="https://i.ibb.co/JzG7Rrk/removed-bg.png" alt="Mzwamadoda Louw">
       </div>
       
           <div class="col-md-12">
@@ -33,6 +33,12 @@ export default {
 
 <style >
 
-
+.mzwa{
+  max-width: 100%;
+  height: 450px;
+}
+.content{
+  margin-bottom: 5rem;
+}
 
 </style>

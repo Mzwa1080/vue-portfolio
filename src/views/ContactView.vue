@@ -111,7 +111,7 @@ export default {
   display: block;
 }
 .container{
-  margin-bottom: 20rem;
+  margin-bottom: 12rem;
 }
 
  @media screen and (max-width: 768px) {
