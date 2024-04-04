@@ -22,7 +22,7 @@
         <div class="card-header">Life Choices Academy</div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
-            <p>
+            <p class="fooont">
               Role : LC Studio Intern <br> <br />
               Year : 2024 April - Present <br> <br />
 
@@ -37,12 +37,12 @@
         <div class="card-header">CodeTelligence Academy</div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
-            <p>
+            <p class="fooont">
               Role : High School Coding Mentor <br> <br />
               Year : 2023 Feb - 2023 Sep <br> <br />
 
               Responsibilities : Delivering content to High School Learners.
-              Compiling weekly content, quizzes and projects.
+              Compiling weekly content, quizzes and projects. <br> <br>
               Reason : The working environment didn't allow me to grow.
             </p>
             
@@ -54,12 +54,12 @@
         <div class="card-header">Ntinga Information Systems</div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
-            <p>
+            <p class="fooont">
               Role : General Assistant <br> <br>
             Year : 2021 Nov - 2022 Nov <br> <br>
   
             Responsibilities : Installing cameras and troubleshooting networks. | Assisting on picking and packing, computer components and delivery.
-            Reason to leave : Working environment was slow paced and chilled, not suitable for my working style.
+           <br> <br> Reason to leave : Working environment was slow paced and chilled, not suitable for my working style.
 
           </p>
             
@@ -71,12 +71,14 @@
         <div class="card-header">Nchimbi Digital Studios</div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
-            <p>
+            <p class="fooont">
               Role : Phototgrapher & Videographer <br> <br>
             Year : 2019 Feb - 2021 Oct  <br> <br>
   
             Responsibilities : Operate  video cameras, including DSLRs and camcorders.
 Utilize camera movements, tilting, zooming, and lighting, to enhance storytelling and capture dynamic shots at various events.
+           <br> <br>
+
             Reason to leave : Travelling safety concerns.
 </p>
             
@@ -150,6 +152,10 @@ export default {
 <style scoped>
 .skills {
   margin-bottom: 200px;
+}
+
+.fooont{
+  font-size: 14px;
 }
 
 .card {
