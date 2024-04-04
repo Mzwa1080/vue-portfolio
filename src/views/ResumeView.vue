@@ -27,6 +27,7 @@
               Year : 2024 April - Present <br> <br />
 
               Responsibilities : Building dynamic web application, using both front-end and back-end technologies.
+            
             </p>
             
           </blockquote>
@@ -42,6 +43,7 @@
 
               Responsibilities : Delivering content to High School Learners.
               Compiling weekly content, quizzes and projects.
+              Reason : The working environment didn't allow me to grow.
             </p>
             
           </blockquote>
@@ -57,7 +59,9 @@
             Year : 2021 Nov - 2022 Nov <br> <br>
   
             Responsibilities : Installing cameras and troubleshooting networks. | Assisting on picking and packing, computer components and delivery.
-            </p>
+            Reason to leave : Working environment was slow paced and chilled, not suitable for my working style.
+
+          </p>
             
           </blockquote>
         </div>
@@ -73,7 +77,8 @@
   
             Responsibilities : Operate  video cameras, including DSLRs and camcorders.
 Utilize camera movements, tilting, zooming, and lighting, to enhance storytelling and capture dynamic shots at various events.
-            </p>
+            Reason to leave : Travelling safety concerns.
+</p>
             
           </blockquote>
         </div>
