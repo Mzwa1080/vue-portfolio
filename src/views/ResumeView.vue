@@ -9,9 +9,13 @@
           :key="education.id"
           :style="{ '--accent-color': education.accentColor }"
         >
-          <div class="date">{{ education.year }}</div>
+          <div class="date">
+            {{ education.year }}
+          </div>
           <div class="title">{{ education.place }}</div>
           <div class="descr">{{ education.description }}</div>
+          <div class="descr">{{ education.subjects }}</div>
+
         </li>
       </ul>
     </div>
