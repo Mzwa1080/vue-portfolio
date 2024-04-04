@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+<div class="container animate__animated animate__backInRight">
     <div class="row mb-5">
       <div class="col-md-8 mt-5 mx-auto text-center">
         <h1>Get In Touch</h1>
