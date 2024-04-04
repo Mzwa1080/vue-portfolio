@@ -81,6 +81,7 @@ export default {
 
 .wrapper {
   margin-left: 150px;
+  margin-bottom: 10rem;
 }
 
 @media screen and (max-width: 768px) {
