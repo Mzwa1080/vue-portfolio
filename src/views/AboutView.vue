@@ -1,71 +1,70 @@
 <template>
   <div class="about-container animate__animated animate__backInRight">
     <div class="row">
-      <h1><span class="underlined">About </span>  Me  </h1>
-
+      <h1><span class="underlined">About </span> Me</h1>
     </div>
 
-    <div class="row d-flex justify-content-center ">
+    <div class="row d-flex justify-content-center">
       <div class="card m-2">
         <div class="card-body">
           <div class="row mb-3">
             <div class="col-md-6 col-12">
-              <img src="https://i.ibb.co/YRB9mcJ/DSC-0268.jpg" height="300px" width="300px" class="circle-img" alt="Mzwamadoda Louw">
+              <img
+                src="https://i.ibb.co/YRB9mcJ/DSC-0268.jpg"
+                height="300px"
+                width="300px"
+                class="circle-img"
+                alt="Mzwamadoda Louw"
+              />
             </div>
-            <div class="col-md-6 col-12  mt-5">
+            <div class="col-md-6 col-12 mt-5">
+              <h5>Date of Birth : 02/04/1999</h5>
+              <h5>Phone No. : +27 79 440 8723</h5>
+              <h5>Location : Khayelitsha, Cape Town</h5>
+              <h5>Email : mshawnlouw@gmail.com</h5>
+              <h5>Nationality : South African</h5>
+              <h5>Languages : Isixhosa, English</h5>
               <h5>
-                Date of Birth : 02/04/1999
-              </h5>
-              <h5>
-                Phone No. : +27 79 440 8723
-              </h5>
-              <h5>
-                Location : Khayelitsha, Cape Town
-              </h5>
-              <h5>
-                Email : mshawnlouw@gmail.com
-              </h5>
-              <h5>
-                Nationality : South African
-              </h5>
-              <h5>
-                Languages : Isixhosa, English
-              </h5>
-              <h5>
-                Hobbies : Listening to music, analyzing the markets and fixing cell phones.
+                Hobbies : Listening to music, analyzing the markets and fixing
+                cell phones.
               </h5>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-12 col-12">
-              <p>I've gained strong skills in web development from Life Choices Academy and assisting others with coding bugs has opened my eyes. I want to start my career as a front-end developer, making websites look great and easy to use. <br> <br> Later on, I'd like to work in Quality Assurance to make sure software works perfectly.</p>
-              <p>Besides coding, I'm really interested in finance and trading. I follow financial news closely and enjoy analyzing market trends. I'm excited to see what the future holds in both technology and finance.</p>
+              <p>
+                I'm currently interning as a Web Developer at Life Choices
+                Studio, where I'm upskilling in languages such as HTML, CSS and
+                JavaScript. I am also completing my Cisco Networking learning
+                journey through LC Studio. With previous training at
+                institutions like Codetelligence Academy and Project Codex, I'm
+                building a strong understanding of both front-end and back-end
+                development.Eager to apply my skills and continue learning in
+                the ever-evolving field of web development. Looking forward to
+                exploring opportunities to contribute and grow.
+              </p>
             </div>
-
           </div>
         </div>
       </div>
     </div>
-  
   </div>
 
   <Footer />
-  
 </template>
 
 <script>
-import Footer from '@/components/Footer.vue';
+import Footer from "@/components/Footer.vue";
 
 export default {
-  components: { Footer}
-}
+  components: { Footer },
+};
 </script>
 
 <style scoped>
-.about-me{
+.about-me {
   font-size: 40px;
-
 }
 .underlined {
   text-decoration: underline; /* Add underline */
@@ -80,18 +79,18 @@ export default {
 .card-body {
   color: white;
 }
-.card{
-  box-shadow: .1vw .1vw .6vw .1vw ;
-  color: gold ;
+.card {
+  box-shadow: 0.1vw 0.1vw 0.6vw 0.1vw;
+  color: gold;
   background-color: transparent;
   border-radius: 5rem;
   width: 80%;
   margin-left: 150px;
 }
-.circle-img{
+.circle-img {
   border-radius: 80%;
-  box-shadow: .06vw .1vw .1vw .1vw ;
-  color: gold ;
+  box-shadow: 0.06vw 0.1vw 0.1vw 0.1vw;
+  color: gold;
   overflow: hidden;
 }
 
@@ -99,9 +98,9 @@ export default {
   .about-container {
     margin-left: auto;
     margin-right: auto;
-    }
+  }
 
-    .card {
+  .card {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -114,5 +113,4 @@ export default {
     display: block;
   }
 }
-
 </style>
