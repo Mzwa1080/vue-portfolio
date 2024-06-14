@@ -7,7 +7,7 @@
       
           <div class="col-md-12">
             <h1 class="text-content">Hi, I'm Mzwamadoda Louw</h1>
-            <h4 class="text-content">I'm a Full Stack Web Developer</h4>
+            <h4 class="text-content">I'm a Full Stack Web Developer | Cisco Networking Technician</h4>
           </div>
 
     </div>

@@ -25,8 +25,9 @@
               <h5>Nationality : South African</h5>
               <h5>Languages : Isixhosa, English</h5>
               <h5>
-                Hobbies : Listening to music, analyzing the markets and fixing
-                cell phones.
+                Hobbies : Listening to music, analyzing the markets, updating my siblings
+                cell phone, updating their windows operating systems and teaching my siblings to use various technologies and software
+             
               </h5>
             </div>
           </div>
@@ -36,13 +37,15 @@
               <p>
                 I'm currently interning as a Web Developer at Life Choices
                 Studio, where I'm upskilling in languages such as HTML, CSS and
-                JavaScript. I am also completing my Cisco Networking learning
-                journey through LC Studio. With previous training at
+                JavaScript. I also completed my Cisco Networking learning
+                journey through LC Studio.
+                
+               <br><br> I'm currently embarking on a new learning journey where I'll be upskilling in Web Development, using tools such as UI/UX, Drupal, WordPress, Docker, SEO, and API.
+                <br> <br>
+                With previous training at
                 institutions like Codetelligence Academy and Project Codex, I'm
                 building a strong understanding of both front-end and back-end
-                development.Eager to apply my skills and continue learning in
-                the ever-evolving field of web development. Looking forward to
-                exploring opportunities to contribute and grow.
+                development.I'm eager to apply my skills and continue learning in the ever-evolving field of web development and technical support. Looking forward to exploring opportunities to contribute and grow.
               </p>
             </div>
           </div>
