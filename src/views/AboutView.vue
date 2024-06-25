@@ -43,7 +43,7 @@
                <br><br> I'm currently embarking on a new learning journey where I'll be upskilling in Web Development, using tools such as UI/UX, Drupal, WordPress, Docker, SEO, and API.
                 <br> <br>
                 With previous training at
-                institutions like Codetelligence Academy and Project Codex, I'm
+                institutions like Life Choices Academy, Codetelligence Academy and Project Codex, I'm
                 building a strong understanding of both front-end and back-end
                 development.I'm eager to apply my skills and continue learning in the ever-evolving field of web development and technical support. Looking forward to exploring opportunities to contribute and grow.
               </p>
