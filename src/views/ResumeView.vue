@@ -4,11 +4,8 @@
       <h1 class="mb-5"><u> Education & Experience</u></h1>
 
       <ul>
-        <li
-          v-for="education in getEducation()"
-          :key="education.id"
-          :style="{ '--accent-color': education.accentColor }"
-        >
+        <li v-for="education in getEducation()" :key="education.id"
+          :style="{ '--accent-color': education.accentColor }">
           <div class="date">{{ education.year }}</div>
           <div class="title">{{ education.place }}</div>
           <div class="descr">{{ education.description }}</div>
@@ -28,7 +25,7 @@
 
               Responsibilities : Building dynamic web application, using both front-end and back-end technologies.
             </p>
-            
+
           </blockquote>
         </div>
       </div>
@@ -43,43 +40,33 @@
               Responsibilities : Delivering content to High School Learners.
               Compiling weekly content, quizzes and projects.
             </p>
-            
+
           </blockquote>
         </div>
       </div>
 
       <div class="card col-md-6 m-4">
-        <div class="card-header">Ntinga Information Systems</div>
+        <div class="card-header">Independent Contractor</div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
             <p>
-              Role : General Assistant <br> <br>
-            Year : 2021 Nov - 2022 Nov <br> <br>
-  
-            Responsibilities : Installing cameras and troubleshooting networks. | Assisting on picking and packing, computer components and delivery.
+              Role : Retail Trader <br> <br>
+              Year : 2019 Sep - 2023 Jan <br> <br>
+
+              Responsibilities : Swing Trading: Focused on trades lasting up to 2 days, with a target of 60 to 2,400
+              pips per trade.
+              Day Trading (Scalping 4hr and 30min): Targeted 30 to 1,000 pips per trade.
+              Day Trading (30min and 5min): Aimed for 30 to 600 pips per trade.
+              Applied proper risk management strategies with calculated risk-reward ratios for each trade
             </p>
-            
+
           </blockquote>
         </div>
       </div>
 
-      <div class="card col-md-6 m-4">
-        <div class="card-header">Nchimbi Digital Studios</div>
-        <div class="card-body">
-          <blockquote class="blockquote mb-0">
-            <p>
-              Role : Phototgrapher & Videographer <br> <br>
-            Year : 2019 Feb - 2021 Oct  <br> <br>
-  
-            Responsibilities : Operate  video cameras, including DSLRs and camcorders.
-Utilize camera movements, tilting, zooming, and lighting, to enhance storytelling and capture dynamic shots at various events.
-            </p>
-            
-          </blockquote>
-        </div>
-      </div>
-    
-    <!-- <div class="col-sm-6">
+
+
+      <!-- <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Nchimbi Digital Studios</h5>
@@ -95,18 +82,8 @@ Utilize camera movements, tilting, zooming, and lighting, to enhance storytellin
     </div>
 
     <div v-if="skills" class="row info skills d-flex justify-content-center">
-      <div
-        class="cardSkills align-items-center m-4"
-        v-for="skill in skills()"
-        :key="skill"
-      >
-        <img
-          class="mt-2"
-          height="60%"
-          width="80%"
-          :src="skill.img"
-          alt="HTML5 Icon"
-        />
+      <div class="cardSkills align-items-center m-4" v-for="skill in skills()" :key="skill">
+        <img class="mt-2" height="60%" width="80%" :src="skill.img" alt="HTML5 Icon" />
         <p>{{ skill.title }}</p>
       </div>
     </div>
@@ -117,7 +94,7 @@ Utilize camera movements, tilting, zooming, and lighting, to enhance storytellin
 </template>
 
 <script>
-  import Footer from '@/components/Footer.vue'; 
+import Footer from '@/components/Footer.vue';
 
 export default {
   methods: {
@@ -138,7 +115,7 @@ export default {
     this.displayEducationData;
     // this.getSkills
   },
-  components: {Footer},
+  components: { Footer },
 };
 </script>
 
@@ -291,12 +268,14 @@ ul li .descr {
   position: relative;
   padding-inline: 1.5rem;
 }
+
 ul li .title {
   overflow: hidden;
   padding-block-start: 1.5rem;
   padding-block-end: 1rem;
   font-weight: 500;
 }
+
 ul li .descr {
   padding-block-end: 1.5rem;
   font-weight: 300;
@@ -315,6 +294,7 @@ ul li .descr::before {
   filter: blur(4px);
   transform: translate(-50%, 50%);
 }
+
 ul li .title::before {
   bottom: calc(100% + 0.125rem);
 }
@@ -328,12 +308,15 @@ ul li .descr::before {
   ul {
     grid-template-columns: 1fr var(--line-w) 1fr;
   }
+
   ul::before {
     grid-column: 2;
   }
+
   ul li:nth-child(odd) {
     grid-column: 1;
   }
+
   ul li:nth-child(even) {
     grid-column: 3;
   }
@@ -352,6 +335,7 @@ ul li .descr::before {
     transform: translate(-50%, -50%);
     left: calc(100% + var(--col-gap) + var(--line-w) / 2);
   }
+
   ul li:nth-child(odd) .date {
     border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
   }

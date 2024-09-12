@@ -1,10 +1,10 @@
 <template>
-  <div class="footerRow">
-    <p class=" ">
+  <div class="footerRow" v-for="footerData in getContacts()" :key="footerData">
+    <p class="footerText">
       Copyright &copy;
       <span>{{ currentYear }}</span>
     </p>
-    <p   v-for="footerData in getContacts()" :key="footerData">
+    <p class="footerText">
       <span class="m-2"><a :href="footerData.linkedin" target="_blank"  class="bi bi-linkedin"></a></span>
       <span class="m-2"><a :href="footerData.gitHub" target="_blank" class="bi bi-github"></a></span>
       <span class="m-2"><a :href="'whatsapp://send?phone=' + footerData.whatsApp" target="_blank" class="bi bi-whatsapp"></a></span>
@@ -43,7 +43,6 @@ p span a:hover {
   font-size: 2rem;
   transform: translateX(40px);
   transform: translateY(-60px);
-
 }
 p span a {
   text-decoration: none;
@@ -59,7 +58,11 @@ p span a {
   width: 100%;
   z-index: 100; /* Ensure the footer stays above other content */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  height: 5rem;
+  height: 3rem; /* Adjust height as needed */
   font-size: 20px;
+}
+
+.footerText {
+  margin: 0;
 }
 </style>

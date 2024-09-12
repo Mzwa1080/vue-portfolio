@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper animate__animated animate__backInRight">
     <div class="row my-3">
       <h1>Reviews</h1>
     </div>
