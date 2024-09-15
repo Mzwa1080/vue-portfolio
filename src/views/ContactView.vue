@@ -1,11 +1,11 @@
 <template>
-<div class="container">
-    <div class="row mb-5">
+<div class=" contactttMe viewHeight">
+    <div class="row  mb-5">
       <div class="col-md-8 mt-5 mx-auto text-center">
-        <h1>Get In Touch</h1>
+        <h1 class="text-white">Get In Touch</h1>
       </div>
     </div>
-    <div class="row mb-5 push">
+    <div class="row  push">
   <div class="col">
     <form action="https://formspree.io/f/xzbnzbzd" method="POST" class="row g-3 justify-content-center">
       <div class="col-md-5">
@@ -102,20 +102,23 @@
   </div>
 
 
-<Footer />
 </template>
 
 <script>
-import Footer from '@/components/Footer.vue';
 export default {
-  components : {
-    Footer
-  }
+
 
 };
 </script>
 
 <style scoped>
+.contactttMe{
+  background-color: #222831
+}
+
+.viewHeight{
+  height: 100vh
+}
  @media screen and (max-width: 768px) {
     .push {
       display: flex;

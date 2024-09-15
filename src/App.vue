@@ -1,37 +1,42 @@
 <template>
-    <Navbar :isNavOpen="isNavOpen" @toggleNav="toggleNav"/>
-
-    <router-view class="animate__animated "/>
-
-
-    <!-- <Footer :footerPosition="footerPosition" /> -->
+  <div id="app">
+    <NavbarComp />
+    <router-view />
+    <Footer />
+  </div>
 </template>
 
 <script>
-import Navbar from "./components/Navbar.vue";
-// import Footer from "./components/Footer.vue";
-import { ref } from 'vue';
+import { onMounted, onBeforeUnmount, ref } from 'vue';
+import NavbarComp from './components/Navbar.vue';
+import Footer from './components/Footer.vue';
 
 export default {
-  components: {
-    Navbar,
-    // Footer
-  },
+  name: 'App',
+  components: { NavbarComp, Footer },
   setup() {
-    const isNavOpen = ref(false);
-    const navWidth = ref('200px');
-    const footerPosition = ref('0');
+    const navbar = ref(null);
 
-    const toggleNav = () => {
-      isNavOpen.value = !isNavOpen.value;
-      footerPosition.value = isNavOpen.value ? '200px' : '0';
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 100; // Adjust scroll threshold as needed
+      if (navbar.value) {
+        if (scrolled) {
+          navbar.value.classList.add('scrolled');
+        } else {
+          navbar.value.classList.remove('scrolled');
+        }
+      }
     };
 
-    return { isNavOpen, navWidth, toggleNav, footerPosition };
+    onMounted(() => {
+      window.addEventListener('scroll', handleScroll);
+    });
+
+    onBeforeUnmount(() => {
+      window.removeEventListener('scroll', handleScroll);
+    });
+
+    return { navbar };
   }
-}
+};
 </script>
-
-<style src="../src/assets/css/style.css">
-
-</style>

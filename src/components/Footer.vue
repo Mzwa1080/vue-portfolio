@@ -49,20 +49,34 @@ p span a {
   color: #2c3e50;
 }
 
+
+/* Footer */
 .footerRow {
-  background: linear-gradient(to bottom right, #ffd700, #000000); /* Gradient background */
+  background-color: #393E46;
   font-family: "Salsa", cursive;
-  color: #2c3e50;
-  position: fixed;
+  color: #fff;
   bottom: 0;
   width: 100%;
   z-index: 100; /* Ensure the footer stays above other content */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
   height: 3rem; /* Adjust height as needed */
   font-size: 20px;
+  text-align: center;
 }
 
 .footerText {
   margin: 0;
+}
+
+p span a:hover {
+  color: white;
+  font-size: 2rem;
+  transform: translateX(40px);
+  transform: translateY(-60px);
+}
+
+p span a {
+  text-decoration: none;
+  color: #2c3e50;
 }
 </style>

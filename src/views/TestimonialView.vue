@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper animate__animated animate__backInRight">
     <div class="row my-3">
-      <h1>Reviews</h1>
+      <h1 class="underline">Reviews</h1>
     </div>
 
     <div class="row justify-content-center">
@@ -36,11 +36,9 @@
     </div>
   </div>
 
-  <Footer />
 </template>
 
 <script>
-import Footer from '@/components/Footer.vue';
 
 export default {
   methods: {
@@ -56,7 +54,6 @@ export default {
   mounted() {
     this.getTestimonials;
   },
-  components: {Footer}
 };
 </script>
 
@@ -79,8 +76,23 @@ export default {
   font-size: .8rem; /* Adjust as needed */
 } 
 
+.underline{
+  color: gold;
+}
 .wrapper {
-  margin-left: 150px;
+  background-color: #222831; /* Set the background color */
+  color: white; /* Ensure the text is readable on dark background */
+  min-height: 100vh; /* Ensure the wrapper covers the full height of the screen */
+  padding: 20px; /* Add padding if needed */
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  color: white;
+  padding: 10px;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {

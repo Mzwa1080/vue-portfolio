@@ -1,112 +1,118 @@
 <template>
-  <div class="container animate__animated animate__backInRight">
-    <div class="projects-content">
-      
-      <div class="row d-flex justify-content-center my-3 mb-5 align-items-center">
-        <h1>Projects</h1>
-        <div class="card m-4" v-for="project in getProjects()" :key="project">
-          <img :src="project.image" alt="" />
-          <div class="card__content">
-            <p class="card__title">{{ project.name }}</p>
-            <p class="card__description">
-              {{ project.description }}
-            </p>
-            <div class="">
-  
-            </div>
-            <a :href="project.gitHub" target="_blank">
-            <button type="button" class=" btn buttonn">
+  <div class="projects-container animate__animated animate__backInRight">
+    <div class="row no-gutters">
+      <!-- Left Side - Project Details -->
+      <div class="col-lg-7 left-section">
+        <div class="project-details">
+          <div v-if="selectedProject">
+            <h1><span class="underlined">{{ selectedProject.name }}</span></h1>
+            <div class="card">
+              <img :src="selectedProject.image" alt="Project Image" />
+              <div class="card__content text-center">
+                <p class="card__description">{{ selectedProject.description }}</p>
+                <a :href="selectedProject.gitHub" target="_blank">
+            <button type="button" class=" btn button">
                 Github
                 
               </button>
             </a>
-            <a :href="project.netlify" target="_blank">
-            <button type="button" class="btn buttonn">
+            <a :href="selectedProject.netlify" target="_blank">
+            <button type="button" class="btn button">
                 Netlify
                 
               </button>
             </a>
-          </div>
-        </div>
-  
-        <!-- CLOSING THIS SECTION -->
-        <!-- <div class="row my-3 grid gap-4" v-if="getProjects()">
-          <div
-            class="card animate__animated animate__zoomIn animate__repeat-2 shadow p-3 mb-5 bgg rounded"
-            v-for="project in getProjects()"
-            :key="project"
-            style="width: 18rem"
-          >
-            <img :src="project.image" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <div class="row my-3">
-                <span>
-                  <h5 class="card-title">{{ project.name  }} </h5>
-                </span>
-                <hr />
-              </div>
-              <div class="row my-3">
-                <p class="card-text">{{ project.description }}</p>
-              </div>
-              <div class="row  my-3">
-                <div class="grid ">
-                  <a :href="project.gitHub"  class=" btn myBtns">Github</a>
-                  <a :href="project.netlify" class=" btn myBtns">Netlify</a>
-                </div>
               </div>
             </div>
           </div>
+          <div v-else>
+            <p>Select a project to see details</p>
+          </div>
         </div>
-        <div v-else>
-          <Spinner />
-        </div> -->
+      </div>
+
+      <!-- Right Side - Project Names -->
+      <div class="col-lg-5 right-section">
+        <div class="project-list">
+          <div
+            class="project-item"
+            v-for="project in getProjects()"
+            :key="project.name"
+            @mouseover="selectProject(project)"
+            @click="flipCard(project)"
+          >
+            {{ project.name }}
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-
-  <Footer />
 </template>
 
 <script>
-// import Spinner from '@/components/Spinner.vue';
-import Footer from '@/components/Footer.vue';
 
 export default {
-  components: { Footer},
+  data() {
+    return {
+      selectedProject: null,
+      flippedProject: null,
+    };
+  },
   methods: {
     getProjects() {
       return this.$store.state.projects;
     },
-  },
-
-  computed: {
-    getData() {
-      return this.$store.dispatch("getData");
+    selectProject(project) {
+      this.selectedProject = project;
+    },
+    flipCard(project) {
+      if (this.flippedProject === project) {
+        this.flippedProject = null;
+      } else {
+        this.flippedProject = project;
+      }
     },
   },
-  mounted() {
-    this.getData;
+  created() {
+    const projects = this.getProjects();
+    if (projects.length > 0) {
+      this.selectedProject = projects[0];  // Set the first project as the default
+    }
   },
 };
 </script>
 
 <style scoped>
-.buttonn{
-  margin: 5px;
-  background-color: #2c3e50;
-  color: white;
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
 }
-@media screen and (min-width: 768px) {
-  .projects-content {
-    margin-left: 250px;
-    margin-bottom: 10rem;
-  }
+
+.left-section {
+  width: 60%; /* Fixed width for the left section */
+  background-color: #222831;
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+.right-section {
+  flex: 0 0 40%; /* Right section is always 40% of the page */
+  background-color: #eeeeee;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .card {
   position: relative;
-  width: 300px;
-  height: 250px;
+  width: 100%;
+  max-width: 100%; /* Card takes full width of left section */
+  margin: 0 auto;
   background: linear-gradient(-45deg, gold 40%, white 100%);
   border-radius: 10px;
   display: flex;
@@ -117,56 +123,106 @@ export default {
 }
 
 .card img {
-  width: 18rem;
-  fill: #333;
+  width: 80%; /* Default image width */
+  height: auto;
+  transition: width 0.6s ease-in-out;
+}
+
+.card:hover img {
+  width: 100%; /* Image expands to full width on hover */
+}
+.underlined {
+  color: gold;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(-45deg, gold 40%, white 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.card:hover {
-  transform: rotate(-5deg) scale(1.1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.card img {
+  width: 80%;
+  height: 80%;
 }
 
 .card__content {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%); /* Center the content */
+  display: flex;
+  flex-direction: column; /* Stack the content vertically */
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center text */
   width: 100%;
   height: 100%;
   padding: 20px;
   box-sizing: border-box;
-  background: linear-gradient(
-    to bottom right,
-    #000,
-    #2c3e50,
-    rgb(244, 233, 92)
-  );
+  background: linear-gradient(to bottom right, #000, #2c3e50, rgb(244, 233, 92));
   opacity: 0;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
+
+.card__description {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 20px; /* Add space between text and buttons */
+}
+
+button {
+  margin-top: 10px; /* Space between the buttons */
+}
+
+
 
 .card:hover .card__content {
   transform: translate(-50%, -50%) rotate(0deg);
   opacity: 1;
 }
 
-.card__title {
-  margin: 0;
-  font-size: 20px;
+/* .card__description {
   color: #fff;
-  font-weight: 700;
-}
-
-.card__description {
-  margin: 5px 0 0;
   font-size: 14px;
-  color: #fff;
-  line-height: 1.2;
+  text-align: center;
+} */
+
+.project-list {
+  display: flex;
+  flex-direction: column;
 }
 
-.card:hover img {
-  scale: 0;
-  transform: rotate(-45deg);
+.project-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.project-item:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 860px) {
+  .left-section, .right-section {
+    flex: 0 0 100%;
+  }
 }
 </style>

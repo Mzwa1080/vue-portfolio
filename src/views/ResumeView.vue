@@ -1,104 +1,89 @@
 <template>
-  <div class="container animate__animated animate__backInRight">
-    <div class="row mt-5 info mb-5 pb-5">
-      <h1 class="mb-5"><u> Education & Experience</u></h1>
+  <div class=" animate__animated animate__backInRight">
+    <div class="">
 
-      <ul>
-        <li v-for="education in getEducation()" :key="education.id"
-          :style="{ '--accent-color': education.accentColor }">
-          <div class="date">{{ education.year }}</div>
-          <div class="title">{{ education.place }}</div>
-          <div class="descr">{{ education.description }}</div>
-        </li>
-      </ul>
-    </div>
-
-    <div class="row info d-flex justify-content-center">
-      <h1>Work Experience</h1>
-      <div class="card col-md-6 m-4">
-        <div class="card-header">Life Choices Academy</div>
-        <div class="card-body">
-          <blockquote class="blockquote mb-0">
-            <p>
-              Role : Full Stack Web Developer <br> <br />
-              Year : 2024 April - Present <br> <br />
-
-              Responsibilities : Building dynamic web application, using both front-end and back-end technologies.
-            </p>
-
-          </blockquote>
+      <div class="row  info">
+        <!-- Education Section -->
+        <div class="col-lg-7 left-section">
+        <h1 class="underlined">Education</h1>
+        <div class="education-timeline">
+          <ul>
+            <li v-for="education in getEducation()" :key="education.id" :style="{ '--accent-color': education.accentColor }">
+              <div class="date">{{ education.year }}</div>
+              <div class="title">{{ education.place }}</div>
+              <div class="descr">{{ education.description }}</div>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="card col-md-6 m-4">
-        <div class="card-header">CodeTelligence Academy</div>
-        <div class="card-body">
-          <blockquote class="blockquote mb-0">
-            <p>
-              Role : High School Coding Mentor <br> <br />
-              Year : 2023 Feb - 2023 Sep <br> <br />
-
-              Responsibilities : Delivering content to High School Learners.
-              Compiling weekly content, quizzes and projects.
-            </p>
-
-          </blockquote>
+  
+        <!-- Work Experience Section -->
+        <div class="col-lg-5 right-section">
+          <h1>Work Experience</h1>
+          <div class="card m-4">
+            <div class="card-header">Life Choices Academy</div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>
+                  Role : Full Stack Web Developer <br> <br />
+                  Year : 2024 April - Present <br> <br />
+                  Responsibilities : Building dynamic web application, using both front-end and back-end technologies.
+                </p>
+              </blockquote>
+            </div>
+          </div>
+          <div class="card m-4">
+            <div class="card-header">CodeTelligence Academy</div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>
+                  Role : High School Coding Mentor <br> <br />
+                  Year : 2023 Feb - 2023 Sep <br> <br />
+                  Responsibilities : Delivering content to High School Learners. Compiling weekly content, quizzes, and projects.
+                </p>
+              </blockquote>
+            </div>
+          </div>
+          <div class="card m-4">
+            <div class="card-header">Independent Contractor</div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>
+                  Role : Retail Trader <br> <br>
+                  Year : 2019 Sep - 2023 Jan <br> <br />
+                  Responsibilities : Swing Trading, Day Trading (Scalping and Regular), Applied proper risk management strategies.
+                </p>
+              </blockquote>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
 
-      <div class="card col-md-6 m-4">
-        <div class="card-header">Independent Contractor</div>
-        <div class="card-body">
-          <blockquote class="blockquote mb-0">
-            <p>
-              Role : Retail Trader <br> <br>
-              Year : 2019 Sep - 2023 Jan <br> <br>
+    <!-- Skills Section -->
+     <div class="">
 
-              Responsibilities : Swing Trading: Focused on trades lasting up to 2 days, with a target of 60 to 2,400
-              pips per trade.
-              Day Trading (Scalping 4hr and 30min): Targeted 30 to 1,000 pips per trade.
-              Day Trading (30min and 5min): Aimed for 30 to 600 pips per trade.
-              Applied proper risk management strategies with calculated risk-reward ratios for each trade
-            </p>
-
-          </blockquote>
+      <div class="row info skills skills-section d-flex flex-column align-items-center">
+      <h1 class="my-4 underlined"> My Skills </h1>
+      <div v-if="skills" class="d-flex flex-wrap justify-content-center">
+        <div class="cardSkills m-4 text-center" v-for="skill in skills()" :key="skill">
+          <img class="mt-2" height="60%" width="80%" :src="skill.img" alt="Skill Icon" />
+          <p>{{ skill.title }}</p>
         </div>
       </div>
-
-
-
-      <!-- <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Nchimbi Digital Studios</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary" data-mdb-ripple-init>Linkedin</a>
-      </div>
-    </div>
-  </div> -->
     </div>
 
-    <div class="row info">
-      <h1 class="my-4"><u> My Skills </u></h1>
-    </div>
+     </div>
 
-    <div v-if="skills" class="row info skills d-flex justify-content-center">
-      <div class="cardSkills align-items-center m-4" v-for="skill in skills()" :key="skill">
-        <img class="mt-2" height="60%" width="80%" :src="skill.img" alt="HTML5 Icon" />
-        <p>{{ skill.title }}</p>
-      </div>
-    </div>
   </div>
 
-  <Footer />
 
 </template>
 
 <script>
-import Footer from '@/components/Footer.vue';
 
 export default {
   methods: {
-    // get the state value of each variable
     getEducation() {
       return this.$store.state.education;
     },
@@ -106,44 +91,52 @@ export default {
       return this.$store.state.skills;
     },
   },
-  computed: {
-    displayEducationData() {
-      return this.$store.dispatch("getData");
-    },
-  },
   mounted() {
-    this.displayEducationData;
-    // this.getSkills
+    this.$store.dispatch("getData");
   },
-  components: { Footer },
 };
 </script>
 
 <style scoped>
+.info {
+  margin: 0;
+}
+
 .skills {
-  margin-bottom: 200px;
+  background-color: #222831;
+  padding: 2rem;
+}
+
+.left-section, .right-section {
+  padding: 2rem;
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+
+.left-section {
+  background-color: #222831; /* Dark background color */
+  color: #fff; /* White text color */
+  flex: 0 0 60%;
+  margin: 0;
+}
+.underlined{
+  color: gold;
+}
+
+.right-section {
+  background-color: #eeeeee; /* Light background color */
+  /* color: #000; Black text color */
+  flex: 0 0 40%;
+  margin: 0;
 }
 
 .card {
-  height: auto;
   border-radius: 26px;
   box-shadow: 35px 35px 68px 0px rgba(222, 219, 28, 0.518),
     inset -8px -8px 16px 0px rgba(91, 115, 187, 0.6),
     inset 0px 11px 28px 0px rgb(255, 255, 255);
   transition: all 0.3s;
   background-color: transparent;
-  color: white;
-}
-
-.cardd {
-  width: 400px;
-  height: auto;
-  border-radius: 26px;
-  box-shadow: 35px 35px 68px 0px rgba(222, 219, 28, 0.518),
-    inset -8px -8px 16px 0px rgba(91, 115, 187, 0.6),
-    inset 0px 11px 28px 0px rgb(255, 255, 255);
-  transition: all 0.3s;
-  cursor: pointer;
+  color: black;
 }
 
 .cardSkills {
@@ -168,176 +161,58 @@ export default {
   border: 1px solid gold;
 }
 
-@media (min-width: 760px) {
-  .info {
-    margin-left: 150px;
-  }
-}
-
 ul {
-  --col-gap: 2rem;
-  --row-gap: 2rem;
-  --line-w: 0.25rem;
   display: grid;
-  grid-template-columns: var(--line-w) 1fr;
-  grid-auto-columns: max-content;
-  column-gap: var(--col-gap);
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding: 0;
   list-style: none;
-  width: min(60rem, 90%);
-  margin-inline: auto;
 }
 
-/* line */
-ul::before {
-  content: "";
-  grid-column: 1;
-  grid-row: 1 / span 20;
-  background: rgb(225, 225, 225);
-  border-radius: calc(var(--line-w) / 2);
-}
-
-/* columns*/
-
-/* row gaps */
-ul li:not(:last-child) {
-  margin-bottom: var(--row-gap);
-}
-
-/* card */
 ul li {
-  grid-column: 2;
-  --inlineP: 1.5rem;
-  margin-inline: var(--inlineP);
-  grid-row: span 2;
   display: grid;
   grid-template-rows: min-content min-content min-content;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  /* background: #333; Adjust to fit the dark theme */
+  color: #fff;
+  border-radius: 8px;
 }
 
-/* date */
-ul li .date {
-  --dateH: 3rem;
-  height: var(--dateH);
-  margin-inline: calc(var(--inlineP) * -1);
-  text-align: center;
+.date {
   background-color: var(--accent-color);
-
   color: white;
   font-size: 1.25rem;
   font-weight: 700;
-
-  display: grid;
-  place-content: center;
-  position: relative;
-
-  border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
+  text-align: center;
+  border-radius: 8px;
+  padding: 1rem;
 }
 
-/* date flap */
-ul li .date::before {
-  content: "";
-  width: var(--inlineP);
-  aspect-ratio: 1;
-  background: var(--accent-color);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
-  position: absolute;
-  top: 100%;
-
-  clip-path: polygon(0 0, 100% 0, 0 100%);
-  right: 0;
+.title, .descr {
+  background: #222831; /* Dark background color */
+  padding: 1rem;
+  border-radius: 8px;
 }
 
-/* circle */
-ul li .date::after {
-  content: "";
-  position: absolute;
-  width: 2rem;
-  aspect-ratio: 1;
-  background: var(--bgColor);
-  border: 0.2rem solid var(--accent-color);
-  border-radius: 50%;
-  top: 50%;
-
-  transform: translate(50%, -50%);
-  right: calc(100% + var(--col-gap) + var(--line-w) / 2);
-}
-
-/* title descr */
-ul li .title,
-ul li .descr {
-  background: var(--bgColor);
-  position: relative;
-  padding-inline: 1.5rem;
-}
-
-ul li .title {
-  overflow: hidden;
-  padding-block-start: 1.5rem;
-  padding-block-end: 1rem;
+.title {
   font-weight: 500;
 }
 
-ul li .descr {
-  padding-block-end: 1.5rem;
+.descr {
   font-weight: 300;
 }
 
-/* shadows */
-ul li .title::before,
-ul li .descr::before {
-  content: "";
-  position: absolute;
-  width: 90%;
-  height: 0.5rem;
-  background: rgba(0, 0, 0, 0.5);
-  left: 50%;
-  border-radius: 50%;
-  filter: blur(4px);
-  transform: translate(-50%, 50%);
-}
-
-ul li .title::before {
-  bottom: calc(100% + 0.125rem);
-}
-
-ul li .descr::before {
-  z-index: -1;
-  bottom: 0.25rem;
-}
-
-@media (min-width: 40rem) {
-  ul {
-    grid-template-columns: 1fr var(--line-w) 1fr;
+/* @media (min-width: 40rem) {
+  .info {
+    display: flex;
+    /* flex-wrap: nowrap;
+    justify-content: space-between; 
   }
 
-  ul::before {
-    grid-column: 2;
+  .left-section, .right-section {
+    flex: 1;
+    min-width: 0;  Ensure no overflow issues 
   }
-
-  ul li:nth-child(odd) {
-    grid-column: 1;
-  }
-
-  ul li:nth-child(even) {
-    grid-column: 3;
-  }
-
-  /* start second card */
-  ul li:nth-child(2) {
-    grid-row: 2/4;
-  }
-
-  ul li:nth-child(odd) .date::before {
-    clip-path: polygon(0 0, 100% 0, 100% 100%);
-    left: 0;
-  }
-
-  ul li:nth-child(odd) .date::after {
-    transform: translate(-50%, -50%);
-    left: calc(100% + var(--col-gap) + var(--line-w) / 2);
-  }
-
-  ul li:nth-child(odd) .date {
-    border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
-  }
-}
+}  */
 </style>
